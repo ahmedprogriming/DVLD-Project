@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace DVLD_Project
 {
-    public partial class formMain : Form
+    public partial class crlPersonInformition : UserControl
     {
-        public formMain()
+        public crlPersonInformition()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
