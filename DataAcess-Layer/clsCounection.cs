@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DataAcess_Layer
 {
-    public class DataAcess
+    static class clsCounection
     {
+        public static string CounectionString = "server=.;DateBase=DVLD;user Id=sa;Password=123456";
     }
 }

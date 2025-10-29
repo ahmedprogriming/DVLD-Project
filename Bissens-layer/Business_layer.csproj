@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{95EF3BB0-ACAF-4AEB-9379-5917D494698A}</ProjectGuid>
+    <ProjectGuid>{A49A321C-0915-47AF-B635-6243FEAC309D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataAcess_Layer</RootNamespace>
-    <AssemblyName>DataAcess-Layer</AssemblyName>
+    <RootNamespace>Bissens_layer</RootNamespace>
+    <AssemblyName>Bissens-layer</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,8 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAcess.cs" />
+    <Compile Include="clsBusinessLayerPersoncs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAcess-Layer\DataAcess_Layer.csproj">
+      <Project>{95ef3bb0-acaf-4aeb-9379-5917d494698a}</Project>
+      <Name>DataAcess_Layer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
