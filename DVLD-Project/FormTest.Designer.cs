@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crlPersonInformition1 = new DVLD_Project.crlPersonInformition();
+            //this.crlPersonInformition1 = new DVLD_Project.crlPersonInformition();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 

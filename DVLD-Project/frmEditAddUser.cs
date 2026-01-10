@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DVLD_Project
 {
-    public partial class AddNewperson : Form
+    public partial class frmAddNewUser : Form
     {
-        public AddNewperson()
+        public frmAddNewUser()
         {
             InitializeComponent();
         }

@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business_Layer", "Bissens-l
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAcess_Layer", "DataAcess-Layer\DataAcess_Layer.csproj", "{95EF3BB0-ACAF-4AEB-9379-5917D494698A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valdteion", "Valdteion\Valdteion.csproj", "{B48FC8EC-AF7F-419C-86E0-CBABB87D7BE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "clsUtil\Util.csproj", "{A0ED8C6B-10A0-4D7F-8BFA-F440811A74A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{95EF3BB0-ACAF-4AEB-9379-5917D494698A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95EF3BB0-ACAF-4AEB-9379-5917D494698A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95EF3BB0-ACAF-4AEB-9379-5917D494698A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B48FC8EC-AF7F-419C-86E0-CBABB87D7BE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B48FC8EC-AF7F-419C-86E0-CBABB87D7BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B48FC8EC-AF7F-419C-86E0-CBABB87D7BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B48FC8EC-AF7F-419C-86E0-CBABB87D7BE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0ED8C6B-10A0-4D7F-8BFA-F440811A74A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0ED8C6B-10A0-4D7F-8BFA-F440811A74A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0ED8C6B-10A0-4D7F-8BFA-F440811A74A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0ED8C6B-10A0-4D7F-8BFA-F440811A74A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

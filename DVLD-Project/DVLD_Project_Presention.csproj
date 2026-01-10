@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FastUI, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastUI.WinForms.1.1.0\lib\net48\FastUI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewperson.cs">
-      <SubType>Form</SubType>
+    <Compile Include="crlCardInfoWithFalter.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddNewperson.Designer.cs">
-      <DependentUpon>AddNewperson.cs</DependentUpon>
+    <Compile Include="crlCardInfoWithFalter.Designer.cs">
+      <DependentUpon>crlCardInfoWithFalter.cs</DependentUpon>
     </Compile>
     <Compile Include="crlCardPerson.cs">
       <SubType>UserControl</SubType>
@@ -58,17 +61,65 @@
     <Compile Include="crlCardPerson.Designer.cs">
       <DependentUpon>crlCardPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="crlInformationUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="crlInformationUser.Designer.cs">
+      <DependentUpon>crlInformationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="crlPersonInformition.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="crlPersonInformition.Designer.cs">
       <DependentUpon>crlPersonInformition.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Faltring.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Faltring.Designer.cs">
+      <DependentUpon>Faltring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="frmAddUpdateUser.Designer.cs">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassWord.Designer.cs">
+      <DependentUpon>frmChangePassWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageUsers.Designer.cs">
+      <DependentUpon>frmManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserInformtion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserInformtion.Designer.cs">
+      <DependentUpon>frmUserInformtion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmFindPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmFindPerson.Designer.cs">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginScreen.Designer.cs">
+      <DependentUpon>frmLoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainForm.Designer.cs">
+      <DependentUpon>frmMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTest.cs">
       <SubType>Form</SubType>
@@ -76,46 +127,70 @@
     <Compile Include="FormTest.Designer.cs">
       <DependentUpon>FormTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagePeople.cs">
+    <Compile Include="People\frmManagePeople.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagePeople.Designer.cs">
-      <DependentUpon>ManagePeople.cs</DependentUpon>
+    <Compile Include="People\frmManagePeople.Designer.cs">
+      <DependentUpon>frmManagePeople.cs</DependentUpon>
     </Compile>
-    <Compile Include="Person Details.cs">
+    <Compile Include="People\frmPersonDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Person Details.Designer.cs">
-      <DependentUpon>Person Details.cs</DependentUpon>
+    <Compile Include="People\frmPersonDetails.Designer.cs">
+      <DependentUpon>frmPersonDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Update -Eite Person Info.cs">
+    <Compile Include="People\frmAddEditPeople.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Update -Eite Person Info.Designer.cs">
-      <DependentUpon>Update -Eite Person Info.cs</DependentUpon>
+    <Compile Include="People\frmAddEditPeople.Designer.cs">
+      <DependentUpon>frmAddEditPeople.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddNewperson.resx">
-      <DependentUpon>AddNewperson.cs</DependentUpon>
+    <EmbeddedResource Include="crlCardInfoWithFalter.resx">
+      <DependentUpon>crlCardInfoWithFalter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="crlCardPerson.resx">
       <DependentUpon>crlCardPerson.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="crlInformationUser.resx">
+      <DependentUpon>crlInformationUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="crlPersonInformition.resx">
       <DependentUpon>crlPersonInformition.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="Faltring.resx">
+      <DependentUpon>Faltring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUpdateUser.resx">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassWord.resx">
+      <DependentUpon>frmChangePassWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageUsers.resx">
+      <DependentUpon>frmManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserInformtion.resx">
+      <DependentUpon>frmUserInformtion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmFindPerson.resx">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginScreen.resx">
+      <DependentUpon>frmLoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainForm.resx">
+      <DependentUpon>frmMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTest.resx">
       <DependentUpon>FormTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagePeople.resx">
-      <DependentUpon>ManagePeople.cs</DependentUpon>
+    <EmbeddedResource Include="People\frmManagePeople.resx">
+      <DependentUpon>frmManagePeople.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Person Details.resx">
-      <DependentUpon>Person Details.cs</DependentUpon>
+    <EmbeddedResource Include="People\frmPersonDetails.resx">
+      <DependentUpon>frmPersonDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,9 +202,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Update -Eite Person Info.resx">
-      <DependentUpon>Update -Eite Person Info.cs</DependentUpon>
+    <EmbeddedResource Include="People\frmAddEditPeople.resx">
+      <DependentUpon>frmAddEditPeople.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -205,6 +281,59 @@
       <Project>{a49a321c-0915-47af-b635-6243feac309d}</Project>
       <Name>Business_Layer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\clsUtil\Util.csproj">
+      <Project>{a0ed8c6b-10a0-4d7f-8bfa-f440811a74a9}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Valdteion\Valdteion.csproj">
+      <Project>{b48fc8ec-af7f-419c-86e0-cbabb87d7be1}</Project>
+      <Name>Valdteion</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Female 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\PersonDetails 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\edit 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Delete 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\send email 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\call 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\IconLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Password 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\sign_in 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\closeBlack32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Users 2 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Add New User 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\SearchPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Next 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\sign_out 32 -2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

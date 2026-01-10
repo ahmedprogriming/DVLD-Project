@@ -8,6 +8,6 @@ namespace DataAcess_Layer
 {
     static class clsCounection
     {
-        public static string CounectionString = "server=.;DateBase=DVLD;user Id=sa;Password=123456";
+        public static string CounectionString = "server=.;Database=DVLD;user Id=sa;Password=123456";
     }
 }

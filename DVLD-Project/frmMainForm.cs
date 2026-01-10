@@ -1,7 +1,7 @@
 ﻿using System;
 
 using System.Windows.Forms;
-using DVLD_Project;
+
 using Business_Layer;
 namespace DVLD_Project
 {
@@ -24,8 +24,19 @@ namespace DVLD_Project
 
         private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManagePeople people = new ManagePeople();
+            frmManagePeople people = new frmManagePeople();
             people.ShowDialog();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageUsers user  = new frmManageUsers();
+            user.ShowDialog();
+        }
+
+        private void accountSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
