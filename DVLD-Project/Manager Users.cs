@@ -6,31 +6,27 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Windows.Forms;
 
 namespace DVLD_Project
 {
-    public partial class Faltring : UserControl
+    public partial class Manager_Users : Form
     {
-        public Faltring()
+        public Manager_Users()
         {
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+      
+        private void Manager_Users_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnAddNewUser_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            frmAddUpdateUser user = new frmAddUpdateUser();
+            user.ShowDialog();
         }
     }
 }

@@ -98,6 +98,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(167, 24);
             this.txtFirstName.TabIndex = 4;
+            this.txtFirstName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtSecondName
             // 
@@ -188,6 +189,7 @@
             this.label8.Size = new System.Drawing.Size(135, 22);
             this.label8.TabIndex = 15;
             this.label8.Text = "Date Of Birth:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // dateTimePicker1
             // 
@@ -381,6 +383,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 28;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox7
             // 
@@ -391,6 +394,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 26;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox6
             // 
@@ -478,6 +482,10 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.linlbRemove);
             this.Controls.Add(this.linlbSetImage);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.picSaved);
+            this.Controls.Add(this.pbxclose);
             this.Controls.Add(this.picImage);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
@@ -566,6 +574,10 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox picImage;
+        private System.Windows.Forms.PictureBox pbxclose;
+        private System.Windows.Forms.PictureBox picSaved;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.LinkLabel linlbSetImage;
         private System.Windows.Forms.LinkLabel linlbRemove;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;

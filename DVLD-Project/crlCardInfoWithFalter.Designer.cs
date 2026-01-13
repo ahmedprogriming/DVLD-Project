@@ -36,7 +36,7 @@
             this.btnAddNew = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.crlPersonInformition1 = new DVLD_Project.crlPersonInformition();
+            this.crlPersonInformition1 = new DVLD_Project.crlPersonInformation();
             this.gbFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -174,6 +174,6 @@
         private System.Windows.Forms.ComboBox cbFilter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private crlPersonInformition crlPersonInformition1;
+        private crlPersonInformation crlPersonInformition1;
     }
 }

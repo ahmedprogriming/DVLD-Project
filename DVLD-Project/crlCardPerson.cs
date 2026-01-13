@@ -119,7 +119,7 @@ namespace DVLD_Project
                 if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
                 {
                     File.Delete(imagePath);
-                }
+        }
 
 
                 picImage.Image = Properties.Resources.Male_512;
@@ -138,7 +138,7 @@ namespace DVLD_Project
         {
             clsPerson clsPerson = FillDataPerson();
 
-           
+
             if (clsPerson.Save())
             {
                 MessageBox.Show("Successfully Save ", "True", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -178,7 +178,7 @@ namespace DVLD_Project
         private void txtNational_Validating_1(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtNational.Text))
-            {
+        {
                 errorProvider1.SetError(txtNational, "NationalNo is required!");
                 return;
             }
@@ -189,7 +189,7 @@ namespace DVLD_Project
             {
                 errorProvider1.SetError(txtNational, "NationalNo already exists!");
                 //e.Cancel = true;
-            }
+        }
             else
             {
                 errorProvider1.SetError(txtNational, "");
@@ -199,7 +199,7 @@ namespace DVLD_Project
         private void rdMail_CheckedChanged(object sender, EventArgs e)
         {
             if(rdMail.Checked )
-            
+
                 picImage.Image = Properties.Resources.Male_512;
         
         }

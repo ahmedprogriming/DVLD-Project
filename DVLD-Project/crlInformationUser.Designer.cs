@@ -35,7 +35,7 @@
             this.labUserID = new System.Windows.Forms.Label();
             this.lblIsActive = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.crlPersonInformition1 = new DVLD_Project.crlPersonInformition();
+            this.crlPersonInformition1 = new DVLD_Project.crlPersonInformation();
             this.grLoginInformtion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -150,7 +150,7 @@
 
         #endregion
 
-        private crlPersonInformition crlPersonInformition1;
+        private crlPersonInformation crlPersonInformition1;
         private System.Windows.Forms.GroupBox grLoginInformtion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;

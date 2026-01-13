@@ -41,8 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="clsValidatoin.cs" />
+
+    <Compile Include="clsBusinessLayerPersoncs.cs" />
+
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAcess-Layer\DataAcess_Layer.csproj">
+      <Project>{95ef3bb0-acaf-4aeb-9379-5917d494698a}</Project>
+      <Name>DataAcess_Layer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

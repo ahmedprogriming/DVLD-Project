@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using System.IO;
 using Bissens_layer;
 using Business_Layer;
 using DVLD_Project.Properties;
+=======
+>>>>>>> 195fc875fb00ab107451adaa6fc58dc626140ada
 
 namespace DVLD_Project
 {
-    public partial class crlPersonInformition : UserControl
+    public partial class crlPersonInformation : UserControl
     {
+<<<<<<< HEAD
         
 
        private clsPerson _person;
@@ -31,11 +35,14 @@ namespace DVLD_Project
         {
             get { return _person; }
         }
-        public crlPersonInformition()
+=======
+>>>>>>> 195fc875fb00ab107451adaa6fc58dc626140ada
+        public crlPersonInformation()
         {
             InitializeComponent();
         }
 
+<<<<<<< HEAD
     
 
         public void LoadPersonInfo(int PersonID)
@@ -113,10 +120,14 @@ namespace DVLD_Project
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+=======
+        private void pictureBox8_Click(object sender, EventArgs e)
+>>>>>>> 195fc875fb00ab107451adaa6fc58dc626140ada
         {
 
         }
 
+<<<<<<< HEAD
         private void linlbEditPerson_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Add_EditePerson add_EditePerson = new Add_EditePerson(_PersonID);
@@ -128,10 +139,18 @@ namespace DVLD_Project
         private void label7_Click(object sender, EventArgs e)
         {
 
-    }
+        }
 
         private void label11_Click(object sender, EventArgs e)
         {
 
-}
+        }
     } }
+=======
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+>>>>>>> 195fc875fb00ab107451adaa6fc58dc626140ada
