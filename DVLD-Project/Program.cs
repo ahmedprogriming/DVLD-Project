@@ -16,7 +16,8 @@ namespace DVLD_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTest());
+            //Application.Run(new Formtest());
+            Application.Run(new frmFormLogin());
         }
     }
 }

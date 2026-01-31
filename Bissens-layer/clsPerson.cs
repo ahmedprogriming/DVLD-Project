@@ -66,6 +66,7 @@ namespace Business_Layer
             this.LastName = lastName;
             this.SecondName = secondName;
             this.ThirdName = thirdName;
+            this.FullName=firstName + " " +secondName+" " +thirdName+" "+ lastName;
             this.Email = email;
             this.Phone = phone;
             this.DateOfBirth = dateOfBirth;

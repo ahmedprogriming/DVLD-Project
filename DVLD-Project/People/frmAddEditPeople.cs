@@ -9,15 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bissens_layer;
 using Business_Layer;
-using Valdteion;
-using Util;
 using DVLD_Project.Properties;
 using System.IO;
 
 
 namespace DVLD_Project
 {
-    public partial class Add_EditePerson : Form
+    public partial class frmAddEditePerson : Form
     {
         public delegate void DataBackEventHandelr(object sender, int PersonID);
 
@@ -28,14 +26,14 @@ namespace DVLD_Project
         enMode Mode;
 
         clsPerson _Person;
-        public Add_EditePerson()
+        public frmAddEditePerson()
         {
             InitializeComponent();
             Mode = enMode.Addnew;
           
         }
 
-        public Add_EditePerson(int PersonID)
+        public frmAddEditePerson(int PersonID)
         {
             InitializeComponent();
             Mode = enMode.Updata;
@@ -207,7 +205,7 @@ namespace DVLD_Project
                 Mode = enMode.Updata;
                 lblTitel.Text = "Update Person";
 
-                MessageBox.Show(" Data Saved Successfully", "True", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(" Data Saved Successfully", "True", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //delget
                 DataBack?.Invoke(this, _Person.PersonID);
@@ -238,7 +236,7 @@ namespace DVLD_Project
         {
             if (txtEmail.Text.Trim() == "")
                 return;
-            if (!clsValidatoin.ValidateEmail(txtEmail.Text))
+            if (!clsValiadion.ValidateEmail(txtEmail.Text))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtEmail, "Invalid Email Address Format!");
@@ -321,6 +319,11 @@ namespace DVLD_Project
                 picImage.Image = Resources.Female_512;
 
             linlbRemove.Visible = true;
+        }
+
+        private void cobCountry_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

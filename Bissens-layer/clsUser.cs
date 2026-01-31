@@ -7,6 +7,7 @@ using System.Text;
 using Bissens_layer;
 using System.Threading.Tasks;
 using System.Diagnostics.Eventing.Reader;
+using Business_Layer;
 
 namespace Bissens_layer
 {
@@ -17,25 +18,27 @@ namespace Bissens_layer
 
         public int UserID { get; set; }
         public int PersonID { get; set; }
-        public int Password { get; set; }
+        public clsPerson PersonInfo;
+        public string Password { get; set; }
         public string UserName { get; set; }
-        public byte IsActive;
+        public bool IsActive;
 
         public clsUser()
         {
             this.UserID = -1;
             this.PersonID = -1;
-            this.Password = -1;
+            this.Password = "";
             this.UserName = "";
-            this.IsActive = 1;
+            this.IsActive=true;
             _mode = Mode.AddNew;
         }
 
-        public clsUser(int userID,int personID,int Password,string Username,byte isActive)
+        public clsUser(int userID,int personID, string Password,string Username, bool isActive)
         {
             this.UserID = userID;
             this.PersonID = personID;
             this.Password = Password;
+            this.PersonInfo=clsPerson.Find(personID);
             this.UserName = Username;
             this.IsActive = isActive;
             _mode = Mode.Update;
@@ -46,13 +49,13 @@ namespace Bissens_layer
             return clsUserData.GetAllUsers();
         }
 
-      static  public clsUser Find(int UserID)
+      static  public clsUser FindByUserID(int UserID)
         {
 
             int PersonID = -1;
-           int Password= -1;
+            string Password = "";
             string UserName = "";
-             byte IsActive=1; 
+            bool IsActive =false; 
            if(clsUserData.GetUserByUserID(UserID,ref PersonID,ref UserName ,ref Password, ref IsActive))
             {
                 return new clsUser(UserID,PersonID,Password,UserName,IsActive);
@@ -64,16 +67,34 @@ namespace Bissens_layer
 
       }
 
-        static public clsUser Find(string UserNmae)
+        static public clsUser FindByPersonID(int PersonID)
+        {
+
+            int UserID = -1;
+            string Password = "";
+            string UserName = "";
+            bool IsActive = false;
+            if (clsUserData.GetUserByPersonID(ref UserID, PersonID, ref UserName, ref Password, ref IsActive))
+            {
+                return new clsUser(UserID, PersonID, Password, UserName, IsActive);
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+        static public clsUser FindByUserNameAndPassword(string UserName,string Password)
         {
 
             int PersonID = -1;
-            int Password = -1;
+          
             int UserID = -1;
-            byte IsActive = 1;
-            if (clsUserData.GetUserByUserName(ref UserID, ref PersonID, UserNmae, ref Password, ref IsActive))
+            bool IsActive = false;
+            if (clsUserData.GetUserByUserNameAndPassword(ref UserID, ref PersonID, UserName, Password, ref IsActive))
             {
-                return new clsUser(UserID, PersonID, Password, UserNmae, IsActive);
+                return new clsUser(UserID, PersonID, Password, UserName, IsActive);
             }
             else
             {
@@ -93,13 +114,23 @@ namespace Bissens_layer
             return clsUserData.UpdateUser(this.UserID,this.PersonID, this.UserName, this.Password, this.IsActive);
         }
 
-        public bool DeleteUser()
+        static public bool DeleteUser(int UserID)
         {
-            return clsUserData.DeleteUser(this.UserID);
+            return clsUserData.DeleteUser(UserID);
         }
-        public bool IsUserExsites(int UserID)
+        static public bool IsUserExsites(int UserID)
         {
             return clsUserData.IsUserExites(UserID);
+        }
+
+        static public bool IsUserNameExsites(string UserName)
+        {
+            return clsUserData.IsUserNameExites(UserName);
+        }
+
+        static public bool IsUserExsiteForePersonID(int PersonID)
+        {
+            return clsUserData.IsUserExitesPersonID(PersonID);
         }
 
         public bool Save()

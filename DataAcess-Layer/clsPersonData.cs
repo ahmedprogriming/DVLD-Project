@@ -152,7 +152,7 @@ namespace DataAcess_Layer
                 {
                     IsFound = true;
 
-                    personID = (int)reader["ID"];
+                    personID = (int)reader["PersonID"];
                     firstName = reader["FirstName"].ToString();
                     secondName = reader["SecondName"].ToString();
                     thirdName = reader["ThirdName"].ToString();
@@ -170,9 +170,9 @@ namespace DataAcess_Layer
                         imagePath = "";
                     }
 
-                    dateOfBirth = (DateTime)reader["dateOfBirth"];
+                    dateOfBirth = (DateTime)reader["DateOfBirth"];
                     gendor = (byte)reader["gendor"];
-                    nationalityCountryID = (int)reader["nationalityCountryID"];
+                    nationalityCountryID = (int)reader["NationalityCountryID"];
 
 
                 }

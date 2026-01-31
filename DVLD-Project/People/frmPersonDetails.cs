@@ -19,13 +19,13 @@ namespace DVLD_Project
             InitializeComponent();
      
      
-            crlPersonInformition1.LoadPersonInfo(PersonID);
+            clrInformtionPople1.LoadPersonInfo(PersonID);
         }
 
         public Person_Details(string NationalNo)
         {
             InitializeComponent();
-            crlPersonInformition1.LoadPersonInfo(NationalNo);
+            clrInformtionPople1.LoadPersonInfo(NationalNo);
         }
 
 

@@ -131,6 +131,11 @@ namespace DVLD_Project
                 dataGridView1.Columns[10].Width = 120;
 
             }
+
+            dataGridView1.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 11);
+            dataGridView1.EnableHeadersVisualStyles = false;
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13);
         }
 
         private void cobFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -162,7 +167,7 @@ namespace DVLD_Project
 
         private void btnAddNewPerson_Click(object sender, EventArgs e)
         {
-            Add_EditePerson addNewperson = new Add_EditePerson();
+            frmAddEditePerson addNewperson = new frmAddEditePerson();
             addNewperson.ShowDialog();
             _RefreshAllpeople();
         }
@@ -180,7 +185,7 @@ namespace DVLD_Project
 
         private void addNewPersonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Add_EditePerson add =new Add_EditePerson();
+            frmAddEditePerson add =new frmAddEditePerson();
             add.ShowDialog();
             _RefreshAllpeople();
         }
@@ -188,7 +193,7 @@ namespace DVLD_Project
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            Add_EditePerson editPerson = new Add_EditePerson((int)dataGridView1.CurrentRow.Cells[0].Value);
+            frmAddEditePerson editPerson = new frmAddEditePerson((int)dataGridView1.CurrentRow.Cells[0].Value);
                 editPerson.ShowDialog();
             _RefreshAllpeople();
         }

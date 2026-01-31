@@ -1,6 +1,6 @@
 ﻿namespace DVLD_Project
 {
-    partial class Add_EditePerson
+    partial class frmAddEditePerson
     {
         /// <summary>
         /// Required designer variable.
@@ -95,10 +95,9 @@
             this.lblTitel.Location = new System.Drawing.Point(436, 19);
             this.lblTitel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitel.Name = "lblTitel";
-            this.lblTitel.Size = new System.Drawing.Size(325, 52);
+            this.lblTitel.Size = new System.Drawing.Size(322, 51);
             this.lblTitel.TabIndex = 7;
             this.lblTitel.Text = "Update Person";
-
             // 
             // lblPersonID
             // 
@@ -158,19 +157,19 @@
             this.cobCountry.IntegralHeight = false;
             this.cobCountry.ItemHeight = 21;
             this.cobCountry.Location = new System.Drawing.Point(711, 361);
-            this.cobCountry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cobCountry.Margin = new System.Windows.Forms.Padding(4);
             this.cobCountry.Name = "cobCountry";
             this.cobCountry.Size = new System.Drawing.Size(160, 29);
             this.cobCountry.TabIndex = 67;
+            this.cobCountry.SelectedIndexChanged += new System.EventHandler(this.cobCountry_SelectedIndexChanged);
             // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(709, 313);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(162, 28);
             this.txtPhone.TabIndex = 66;
-         
             // 
             // label13
             // 
@@ -182,7 +181,6 @@
             this.label13.Size = new System.Drawing.Size(95, 25);
             this.label13.TabIndex = 65;
             this.label13.Text = "Country:";
-          
             // 
             // label12
             // 
@@ -198,7 +196,7 @@
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(290, 419);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(581, 130);
@@ -207,11 +205,10 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(290, 361);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(156, 28);
             this.txtEmail.TabIndex = 59;
-         
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // rdFemale
@@ -219,14 +216,13 @@
             this.rdFemale.AutoSize = true;
             this.rdFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdFemale.Location = new System.Drawing.Point(422, 304);
-            this.rdFemale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdFemale.Margin = new System.Windows.Forms.Padding(4);
             this.rdFemale.Name = "rdFemale";
             this.rdFemale.Size = new System.Drawing.Size(98, 29);
             this.rdFemale.TabIndex = 56;
             this.rdFemale.TabStop = true;
             this.rdFemale.Text = "Female";
             this.rdFemale.UseVisualStyleBackColor = true;
-           
             this.rdFemale.Click += new System.EventHandler(this.rdFemale_Click);
             // 
             // rdMail
@@ -234,7 +230,7 @@
             this.rdMail.AutoSize = true;
             this.rdMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdMail.Location = new System.Drawing.Point(289, 304);
-            this.rdMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdMail.Margin = new System.Windows.Forms.Padding(4);
             this.rdMail.Name = "rdMail";
             this.rdMail.Size = new System.Drawing.Size(76, 29);
             this.rdMail.TabIndex = 55;
@@ -257,35 +253,32 @@
             // txtNational
             // 
             this.txtNational.Location = new System.Drawing.Point(290, 254);
-            this.txtNational.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNational.Margin = new System.Windows.Forms.Padding(4);
             this.txtNational.Name = "txtNational";
             this.txtNational.Size = new System.Drawing.Size(156, 28);
             this.txtNational.TabIndex = 51;
-      
             this.txtNational.Validating += new System.ComponentModel.CancelEventHandler(this.txtNational_Validating);
             // 
             // txtLastname
             // 
             this.txtLastname.Location = new System.Drawing.Point(892, 199);
-            this.txtLastname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLastname.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(159, 28);
             this.txtLastname.TabIndex = 48;
-        
             // 
             // txtThiedname
             // 
             this.txtThiedname.Location = new System.Drawing.Point(694, 201);
-            this.txtThiedname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtThiedname.Margin = new System.Windows.Forms.Padding(4);
             this.txtThiedname.Name = "txtThiedname";
             this.txtThiedname.Size = new System.Drawing.Size(177, 28);
             this.txtThiedname.TabIndex = 47;
-          
             // 
             // txtSecondName
             // 
             this.txtSecondName.Location = new System.Drawing.Point(477, 201);
-            this.txtSecondName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSecondName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSecondName.Name = "txtSecondName";
             this.txtSecondName.Size = new System.Drawing.Size(193, 28);
             this.txtSecondName.TabIndex = 46;
@@ -293,7 +286,7 @@
             // txtFirstName
             // 
             this.txtFirstName.Location = new System.Drawing.Point(290, 205);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(156, 28);
             this.txtFirstName.TabIndex = 45;
@@ -341,7 +334,6 @@
             this.label7.Size = new System.Drawing.Size(137, 25);
             this.label7.TabIndex = 74;
             this.label7.Text = "National No.:";
-         
             // 
             // label3
             // 
@@ -372,7 +364,6 @@
             this.label2.Size = new System.Drawing.Size(49, 25);
             this.label2.TabIndex = 101;
             this.label2.Text = "First";
-        
             // 
             // label4
             // 
@@ -384,7 +375,6 @@
             this.label4.Size = new System.Drawing.Size(80, 25);
             this.label4.TabIndex = 102;
             this.label4.Text = "Second";
-            
             // 
             // label5
             // 
@@ -396,7 +386,6 @@
             this.label5.Size = new System.Drawing.Size(57, 25);
             this.label5.TabIndex = 103;
             this.label5.Text = "Third";
-           
             // 
             // label6
             // 
@@ -408,7 +397,6 @@
             this.label6.Size = new System.Drawing.Size(49, 25);
             this.label6.TabIndex = 104;
             this.label6.Text = "Last";
-           
             // 
             // btnSave
             // 
@@ -418,7 +406,7 @@
             this.btnSave.Image = global::DVLD_Project.Properties.Resources.Save_32;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnSave.Location = new System.Drawing.Point(733, 564);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(121, 48);
             this.btnSave.TabIndex = 78;
@@ -434,7 +422,7 @@
             this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnClose.Location = new System.Drawing.Point(601, 568);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(110, 40);
             this.btnClose.TabIndex = 79;
@@ -445,7 +433,7 @@
             // 
             this.picImage.Image = global::DVLD_Project.Properties.Resources.Male_512;
             this.picImage.Location = new System.Drawing.Point(897, 241);
-            this.picImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picImage.Margin = new System.Windows.Forms.Padding(4);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(154, 168);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -456,7 +444,7 @@
             // 
             this.pictureBox10.Image = global::DVLD_Project.Properties.Resources.Country_32;
             this.pictureBox10.Location = new System.Drawing.Point(646, 367);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(42, 37);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -467,7 +455,7 @@
             // 
             this.pictureBox9.Image = global::DVLD_Project.Properties.Resources.Phone_32;
             this.pictureBox9.Location = new System.Drawing.Point(646, 315);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(42, 44);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -478,7 +466,7 @@
             // 
             this.pictureBox8.Image = global::DVLD_Project.Properties.Resources.Address_32;
             this.pictureBox8.Location = new System.Drawing.Point(245, 419);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(41, 36);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -489,7 +477,7 @@
             // 
             this.pictureBox7.Image = global::DVLD_Project.Properties.Resources.Email_32;
             this.pictureBox7.Location = new System.Drawing.Point(245, 355);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(37, 37);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -500,7 +488,7 @@
             // 
             this.pictureBox6.Image = global::DVLD_Project.Properties.Resources.Woman_32;
             this.pictureBox6.Location = new System.Drawing.Point(373, 303);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(41, 34);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -511,7 +499,7 @@
             // 
             this.pictureBox5.Image = global::DVLD_Project.Properties.Resources.Man_32;
             this.pictureBox5.Location = new System.Drawing.Point(245, 301);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(36, 34);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -522,7 +510,7 @@
             // 
             this.pictureBox4.Image = global::DVLD_Project.Properties.Resources.Number_321;
             this.pictureBox4.Location = new System.Drawing.Point(646, 254);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(42, 44);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -533,7 +521,7 @@
             // 
             this.pictureBox3.Image = global::DVLD_Project.Properties.Resources.Number_32;
             this.pictureBox3.Location = new System.Drawing.Point(245, 241);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(36, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -544,7 +532,7 @@
             // 
             this.pictureBox2.Image = global::DVLD_Project.Properties.Resources.Person_32;
             this.pictureBox2.Location = new System.Drawing.Point(245, 201);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -555,7 +543,7 @@
             // 
             this.pictureBox1.Image = global::DVLD_Project.Properties.Resources.Number_32;
             this.pictureBox1.Location = new System.Drawing.Point(244, 112);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -571,7 +559,7 @@
             this.dateTime.TabIndex = 105;
             this.dateTime.Value = new System.DateTime(2000, 1, 2, 0, 0, 0, 0);
             // 
-            // Add_EditePerson
+            // frmAddEditePerson
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -622,8 +610,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitel);
             this.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Add_EditePerson";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "frmAddEditePerson";
             this.ShowIcon = false;
             this.Text = "Add/EditePerson";
             this.Load += new System.EventHandler(this.Add_EditePerson_Load);

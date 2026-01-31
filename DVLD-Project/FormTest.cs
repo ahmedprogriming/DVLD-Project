@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace DVLD_Project
 {
-    public partial class FormTest : Form
+    public partial class Formtest : Form
     {
-        public FormTest()
+        public Formtest()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmManageUsers frmAddUpdateUser = new frmManageUsers();
+            frmAddUpdateUser.ShowDialog();
+        }
+
+        private void Formtest_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

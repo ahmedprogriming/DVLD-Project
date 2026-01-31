@@ -1,6 +1,6 @@
 ﻿namespace DVLD_Project
 {
-    partial class FormTest
+    partial class Formtest
     {
         /// <summary>
         /// Required designer variable.
@@ -28,48 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            //this.crlPersonInformition1 = new DVLD_Project.crlPersonInformition();
-            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // crlPersonInformition1
+            // button1
             // 
-            this.crlPersonInformition1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.crlPersonInformition1.Location = new System.Drawing.Point(104, 108);
-            this.crlPersonInformition1.Name = "crlPersonInformition1";
-            this.crlPersonInformition1.Size = new System.Drawing.Size(874, 396);
-            this.crlPersonInformition1.TabIndex = 10;
+            this.button1.Location = new System.Drawing.Point(335, 172);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Traditional Arabic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(363, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(315, 66);
-            this.label2.TabIndex = 9;
-            this.label2.Text = " Person Details";
-            // 
-            // FormTest
+            // Formtest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1089, 515);
-            this.Controls.Add(this.crlPersonInformition1);
-            this.Controls.Add(this.label2);
-            this.Name = "FormTest";
-            this.ShowIcon = false;
-            this.Text = "FormTest";
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Name = "Formtest";
+            this.Text = "Formtest";
+            this.Load += new System.EventHandler(this.Formtest_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private crlPersonInformition crlPersonInformition1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -42,7 +42,7 @@
             this.lblTitel.Location = new System.Drawing.Point(339, 20);
             this.lblTitel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitel.Name = "lblTitel";
-            this.lblTitel.Size = new System.Drawing.Size(268, 52);
+            this.lblTitel.Size = new System.Drawing.Size(265, 51);
             this.lblTitel.TabIndex = 8;
             this.lblTitel.Text = "Find Person";
             // 
@@ -54,7 +54,7 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::DVLD_Project.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnClose.Location = new System.Drawing.Point(734, 528);
+            this.btnClose.Location = new System.Drawing.Point(750, 462);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(123, 40);
@@ -67,26 +67,25 @@
             // 
             this.crlCardInfoWithFalter1.BackColor = System.Drawing.Color.White;
             this.crlCardInfoWithFalter1.FiltrEnbled = true;
+            this.crlCardInfoWithFalter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crlCardInfoWithFalter1.Location = new System.Drawing.Point(24, 75);
             this.crlCardInfoWithFalter1.Name = "crlCardInfoWithFalter1";
             this.crlCardInfoWithFalter1.ShowAddPerson = true;
-            this.crlCardInfoWithFalter1.Size = new System.Drawing.Size(875, 446);
+            this.crlCardInfoWithFalter1.Size = new System.Drawing.Size(875, 380);
             this.crlCardInfoWithFalter1.TabIndex = 81;
-         
             // 
             // frmFindPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(928, 583);
+            this.ClientSize = new System.Drawing.Size(928, 508);
             this.Controls.Add(this.crlCardInfoWithFalter1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblTitel);
             this.Name = "frmFindPerson";
             this.ShowIcon = false;
             this.Text = "frmFindPerson";
-          
             this.ResumeLayout(false);
             this.PerformLayout();
 
