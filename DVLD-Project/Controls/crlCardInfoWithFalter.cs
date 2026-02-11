@@ -157,5 +157,10 @@ namespace DVLD_Project
             if(txtFilter.Text=="Person ID")
                 e.Handled=!char.IsDigit(e.KeyChar)&&!char.IsControl(e.KeyChar);
         }
+
+        private void txtFilter_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

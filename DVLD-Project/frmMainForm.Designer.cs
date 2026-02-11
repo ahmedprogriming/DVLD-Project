@@ -112,16 +112,18 @@
             this.tmsInterntionalLicenes});
             this.tsmnewDrivingLicensesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Historic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmnewDrivingLicensesToolStripMenuItem.Image = global::DVLD_Project.Properties.Resources.New_Driving_License_32;
+            this.tsmnewDrivingLicensesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmnewDrivingLicensesToolStripMenuItem.Name = "tsmnewDrivingLicensesToolStripMenuItem";
-            this.tsmnewDrivingLicensesToolStripMenuItem.Size = new System.Drawing.Size(459, 30);
+            this.tsmnewDrivingLicensesToolStripMenuItem.Size = new System.Drawing.Size(471, 38);
             this.tsmnewDrivingLicensesToolStripMenuItem.Text = "New Driving Licenses";
             // 
             // tsmLocaolLicenes
             // 
             this.tsmLocaolLicenes.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmLocaolLicenes.Image = global::DVLD_Project.Properties.Resources.Local_32;
+            this.tsmLocaolLicenes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmLocaolLicenes.Name = "tsmLocaolLicenes";
-            this.tsmLocaolLicenes.Size = new System.Drawing.Size(252, 26);
+            this.tsmLocaolLicenes.Size = new System.Drawing.Size(264, 38);
             this.tsmLocaolLicenes.Text = "Locaol Licenes";
             this.tsmLocaolLicenes.Click += new System.EventHandler(this.tsmLocaolLicenes_Click);
             // 
@@ -129,41 +131,47 @@
             // 
             this.tmsInterntionalLicenes.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tmsInterntionalLicenes.Image = global::DVLD_Project.Properties.Resources.International_32;
+            this.tmsInterntionalLicenes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tmsInterntionalLicenes.Name = "tmsInterntionalLicenes";
-            this.tmsInterntionalLicenes.Size = new System.Drawing.Size(252, 26);
+            this.tmsInterntionalLicenes.Size = new System.Drawing.Size(264, 38);
             this.tmsInterntionalLicenes.Text = "International Licenes";
             // 
             // tsmRenewDrivingLicenes
             // 
             this.tsmRenewDrivingLicenes.Font = new System.Drawing.Font("Segoe UI Historic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmRenewDrivingLicenes.Image = global::DVLD_Project.Properties.Resources.Renew_Driving_License_32;
+            this.tsmRenewDrivingLicenes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmRenewDrivingLicenes.Name = "tsmRenewDrivingLicenes";
-            this.tsmRenewDrivingLicenes.Size = new System.Drawing.Size(459, 30);
+            this.tsmRenewDrivingLicenes.Size = new System.Drawing.Size(471, 38);
             this.tsmRenewDrivingLicenes.Text = "Renew Driving Licenes";
             // 
             // tsmReplace
             // 
             this.tsmReplace.Font = new System.Drawing.Font("Segoe UI Historic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmReplace.Image = global::DVLD_Project.Properties.Resources.Damaged_Driving_License_321;
+            this.tsmReplace.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmReplace.Name = "tsmReplace";
-            this.tsmReplace.Size = new System.Drawing.Size(459, 30);
+            this.tsmReplace.Size = new System.Drawing.Size(471, 38);
             this.tsmReplace.Text = "Replacement for Lost or Damage Licenes";
             // 
             // tmsReleaseDetaindDrivingLicenes
             // 
             this.tmsReleaseDetaindDrivingLicenes.Font = new System.Drawing.Font("Segoe UI Historic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tmsReleaseDetaindDrivingLicenes.Image = global::DVLD_Project.Properties.Resources.Detained_Driving_License_32;
+            this.tmsReleaseDetaindDrivingLicenes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tmsReleaseDetaindDrivingLicenes.Name = "tmsReleaseDetaindDrivingLicenes";
-            this.tmsReleaseDetaindDrivingLicenes.Size = new System.Drawing.Size(459, 30);
+            this.tmsReleaseDetaindDrivingLicenes.Size = new System.Drawing.Size(471, 38);
             this.tmsReleaseDetaindDrivingLicenes.Text = "Release Detaind Driving Licenes";
             // 
             // tsmRetakeTest
             // 
             this.tsmRetakeTest.Font = new System.Drawing.Font("Segoe UI Historic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmRetakeTest.Image = global::DVLD_Project.Properties.Resources.Retake_Test_32;
+            this.tsmRetakeTest.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmRetakeTest.Name = "tsmRetakeTest";
-            this.tsmRetakeTest.Size = new System.Drawing.Size(459, 30);
+            this.tsmRetakeTest.Size = new System.Drawing.Size(471, 38);
             this.tsmRetakeTest.Text = "Retake Test";
+            this.tsmRetakeTest.Click += new System.EventHandler(this.tsmRetakeTest_Click);
             // 
             // tsmmanageApplicationToolStripMenuItem
             // 
@@ -182,8 +190,9 @@
             // 
             this.tsmLocalDrivingLiceneApplicaton.Font = new System.Drawing.Font("Segoe UI Historic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmLocalDrivingLiceneApplicaton.Image = global::DVLD_Project.Properties.Resources.LocalDriving_License;
+            this.tsmLocalDrivingLiceneApplicaton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmLocalDrivingLiceneApplicaton.Name = "tsmLocalDrivingLiceneApplicaton";
-            this.tsmLocalDrivingLiceneApplicaton.Size = new System.Drawing.Size(395, 30);
+            this.tsmLocalDrivingLiceneApplicaton.Size = new System.Drawing.Size(407, 38);
             this.tsmLocalDrivingLiceneApplicaton.Text = "Local Driving Licenes Applicatons";
             this.tsmLocalDrivingLiceneApplicaton.Click += new System.EventHandler(this.tsmLocalDrivingLiceneApplicaton_Click);
             // 
@@ -191,8 +200,9 @@
             // 
             this.tsmInternationalLicenesApplications.Font = new System.Drawing.Font("Segoe UI Historic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmInternationalLicenesApplications.Image = global::DVLD_Project.Properties.Resources.International_32;
+            this.tsmInternationalLicenesApplications.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmInternationalLicenesApplications.Name = "tsmInternationalLicenesApplications";
-            this.tsmInternationalLicenesApplications.Size = new System.Drawing.Size(395, 30);
+            this.tsmInternationalLicenesApplications.Size = new System.Drawing.Size(407, 38);
             this.tsmInternationalLicenesApplications.Text = "International Licenes Applications";
             // 
             // tsmDetainLicenses

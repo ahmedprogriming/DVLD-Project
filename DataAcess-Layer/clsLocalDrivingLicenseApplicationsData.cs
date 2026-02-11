@@ -232,13 +232,14 @@ UPDATE LocalDrivingLicenseApplications
 
             SqlConnection connection = new SqlConnection(clsCounection.CounectionString);
 
-            string query = @"Select top 1 Tests.TestResult from LocalDrivingLicenseApplications inner join
-TestAppointments on LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID=TestAppointments.LocalDrivingLicenseApplicationID
-inner join Tests On TestAppointments.TestAppointmentID=Tests.TestAppointmentID
-where 
-(LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID)
-and (TestAppointments.TestTypeID=@TestTypeID) 
-Order by TestAppointments.TestAppointmentID Desc";
+            string query = @"SELECT top 1 TestResult
+                            FROM LocalDrivingLicenseApplications INNER JOIN
+                                 TestAppointments ON LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = TestAppointments.LocalDrivingLicenseApplicationID INNER JOIN
+                                 Tests ON TestAppointments.TestAppointmentID = Tests.TestAppointmentID
+                            WHERE
+                            (LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID) 
+                            AND(TestAppointments.TestTypeID = @TestTypeID)
+                            ORDER BY TestAppointments.TestAppointmentID desc";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -270,13 +271,14 @@ Order by TestAppointments.TestAppointmentID Desc";
 
             SqlConnection connection = new SqlConnection(clsCounection.CounectionString);
 
-            string query = @"Select top 1 Found=1 from LocalDrivingLicenseApplications inner join
-TestAppointments on LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID=TestAppointments.LocalDrivingLicenseApplicationID
-inner join Tests On TestAppointments.TestAppointmentID=Tests.TestAppointmentID
-where 
-(LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID)
-and (TestAppointments.TestTypeID=@TestTypeID) 
-Order by TestAppointments.TestAppointmentID Desc";
+            string query = @"SELECT top 1 Found=1
+                            FROM LocalDrivingLicenseApplications INNER JOIN
+                                 TestAppointments ON LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = TestAppointments.LocalDrivingLicenseApplicationID INNER JOIN
+                                 Tests ON TestAppointments.TestAppointmentID = Tests.TestAppointmentID
+                            WHERE
+                            (LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID) 
+                            AND(TestAppointments.TestTypeID = @TestTypeID)
+                            ORDER BY TestAppointments.TestAppointmentID desc";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -288,9 +290,9 @@ Order by TestAppointments.TestAppointmentID Desc";
                 connection.Open();
 
                 object reader = command.ExecuteScalar();
-                if (reader != null && bool.TryParse(reader.ToString(), out bool returnResult))
+                if (reader != null )
                 {
-                    Resulte = returnResult;
+                    Resulte = true;
                 }
             }
             catch (Exception ex)
@@ -346,13 +348,13 @@ Order by TestAppointments.TestAppointmentID Desc";
 
             SqlConnection connection = new SqlConnection(clsCounection.CounectionString);
 
-            string query = @"Select top 1 Found=1 from LocalDrivingLicenseApplications inner join
-TestAppointments on LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID=TestAppointments.LocalDrivingLicenseApplicationID
-inner join Tests On TestAppointments.TestAppointmentID=Tests.TestAppointmentID
-where 
-(LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID)
-and (TestAppointments.TestTypeID=@TestTypeID ) and IsLocked=0
-Order by TestAppointments.TestAppointmentID Desc";
+            string query = @"SELECT top 1 Found=1
+                            FROM LocalDrivingLicenseApplications INNER JOIN
+                                 TestAppointments ON LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = TestAppointments.LocalDrivingLicenseApplicationID 
+                            WHERE
+                            (LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID)  
+                            AND(TestAppointments.TestTypeID = @TestTypeID) and isLocked=0
+                            ORDER BY TestAppointments.TestAppointmentID desc";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -364,10 +366,9 @@ Order by TestAppointments.TestAppointmentID Desc";
                 connection.Open();
 
                 object reader = command.ExecuteScalar();
-                if (reader != null && bool.TryParse(reader.ToString(), out bool returnResult))
-                {
-                    Resulte = returnResult;
-                }
+
+                Resulte = (reader != null);
+                
             }
             catch (Exception ex)
             {

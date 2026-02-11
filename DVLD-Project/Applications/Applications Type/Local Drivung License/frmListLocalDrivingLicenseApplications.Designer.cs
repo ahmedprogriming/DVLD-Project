@@ -107,6 +107,7 @@
             this.dgvLDLApplication.Size = new System.Drawing.Size(1164, 369);
             this.dgvLDLApplication.TabIndex = 94;
             this.dgvLDLApplication.TabStop = false;
+            this.dgvLDLApplication.SelectionChanged += new System.EventHandler(this.dgvLDLApplication_SelectionChanged);
             // 
             // MSLocalDrivingApp
             // 
@@ -123,7 +124,7 @@
             this.tsmpersonHistory});
             this.MSLocalDrivingApp.Name = "contextMenuStrip1";
             this.MSLocalDrivingApp.Size = new System.Drawing.Size(352, 336);
-           
+            this.MSLocalDrivingApp.Opening += new System.ComponentModel.CancelEventHandler(this.MSLocalDrivingApp_Opening);
             // 
             // tsmShowAppDetiles
             // 
@@ -133,6 +134,7 @@
             this.tsmShowAppDetiles.Name = "tsmShowAppDetiles";
             this.tsmShowAppDetiles.Size = new System.Drawing.Size(351, 38);
             this.tsmShowAppDetiles.Text = "Show Application Details";
+            this.tsmShowAppDetiles.Click += new System.EventHandler(this.tsmShowAppDetiles_Click);
             // 
             // tsmEditApp
             // 
@@ -142,6 +144,7 @@
             this.tsmEditApp.Name = "tsmEditApp";
             this.tsmEditApp.Size = new System.Drawing.Size(351, 38);
             this.tsmEditApp.Text = "Edit Application";
+            this.tsmEditApp.Click += new System.EventHandler(this.tsmEditApp_Click);
             // 
             // tsmCanselApp
             // 
@@ -160,6 +163,7 @@
             this.tsDeleteApp.Name = "tsDeleteApp";
             this.tsDeleteApp.Size = new System.Drawing.Size(351, 38);
             this.tsDeleteApp.Text = "Delete Application";
+            this.tsDeleteApp.Click += new System.EventHandler(this.tsDeleteApp_Click);
             // 
             // tsSechduleTest
             // 
@@ -173,6 +177,7 @@
             this.tsSechduleTest.Name = "tsSechduleTest";
             this.tsSechduleTest.Size = new System.Drawing.Size(351, 38);
             this.tsSechduleTest.Text = "Sechdule Test";
+            this.tsSechduleTest.Click += new System.EventHandler(this.tsSechduleTest_Click);
             // 
             // tsmVisionTest
             // 
@@ -192,6 +197,7 @@
             this.tsmWrittenTest.Name = "tsmWrittenTest";
             this.tsmWrittenTest.Size = new System.Drawing.Size(248, 38);
             this.tsmWrittenTest.Text = "Sechdule Written Test";
+            this.tsmWrittenTest.Click += new System.EventHandler(this.tsmWrittenTest_Click);
             // 
             // tsmStreatTest
             // 
@@ -201,6 +207,7 @@
             this.tsmStreatTest.Name = "tsmStreatTest";
             this.tsmStreatTest.Size = new System.Drawing.Size(248, 38);
             this.tsmStreatTest.Text = "Sechdule Street Test";
+            this.tsmStreatTest.Click += new System.EventHandler(this.tsmStreatTest_Click);
             // 
             // tsmIssue
             // 

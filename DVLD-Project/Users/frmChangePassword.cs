@@ -141,6 +141,9 @@ namespace DVLD_Project
             this.Close();
         }
 
-     
+        private void txtCurrentPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

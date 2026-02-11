@@ -32,6 +32,7 @@ namespace DVLD_Project
         {
             InitializeComponent();
             _LocalDrivingLicenseApplicationsID=ID;
+            Mode = enMode.Updata;
         }
 
         private void _FillCombClassName()
@@ -70,11 +71,11 @@ namespace DVLD_Project
           
         }
 
-        //private void DataBackEvent(object sender, int PersonID)
-        //{
-        //    _Selectedperson = PersonID;
-        //    crlCardInfoWithFalter1.LoadPersonInfo(PersonID);
-        //}
+        private void DataBackEvent(object sender, int PersonID)
+        {
+            _Selectedperson = PersonID;
+            crlCardInfoWithFalter1.LoadPersonInfo(PersonID);
+        }
         private void _LoadData()
         {
             crlCardInfoWithFalter1.FiltrEnbled = false;
@@ -86,7 +87,7 @@ namespace DVLD_Project
                 return;
             }
 
-            crlCardInfoWithFalter1.LoadPersonInfo(_Selectedperson);
+            crlCardInfoWithFalter1.LoadPersonInfo(_clsLDLApp.ApplicantPersonID);
             lblDLAppID.Text=_clsLDLApp.LocalDrivingLicenseApplicationID.ToString();
             lblAppdate.Text = clsFormat.DateToShort(_clsLDLApp.ApplicationDate);
             lblAppFees.Text = _clsLDLApp.PaidFees.ToString();

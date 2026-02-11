@@ -217,6 +217,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFormLogin";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login_Screen";
             this.Load += new System.EventHandler(this.Login_Screen_Load);
             this.panel1.ResumeLayout(false);

@@ -50,6 +50,8 @@ namespace DataAcess_Layer
             }
             catch (Exception ex)
             {
+                IsFound = false;
+                throw;
             }
             finally
             { connection.Close(); }

@@ -1,6 +1,6 @@
 ﻿namespace DVLD_Project
 {
-    partial class frmLicenseHistory
+    partial class frmShowPersonLicenseHistory
     {
         /// <summary>
         /// Required designer variable.
@@ -75,6 +75,7 @@
             this.btnClos.TabIndex = 198;
             this.btnClos.Text = "    Close";
             this.btnClos.UseVisualStyleBackColor = false;
+            this.btnClos.Click += new System.EventHandler(this.btnClos_Click);
             // 
             // crlDriverLicense1
             // 
@@ -95,8 +96,9 @@
             this.crlCardInfoWithFalter1.ShowAddPerson = true;
             this.crlCardInfoWithFalter1.Size = new System.Drawing.Size(868, 385);
             this.crlCardInfoWithFalter1.TabIndex = 0;
+            this.crlCardInfoWithFalter1.OnPersonSelected += new System.Action<int>(this.crlCardInfoWithFalter1_OnPersonSelected);
             // 
-            // frmLicenseHistory
+            // frmShowPersonLicenseHistory
             // 
             this.AcceptButton = this.btnClos;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -110,10 +112,11 @@
             this.Controls.Add(this.crlCardInfoWithFalter1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmLicenseHistory";
+            this.Name = "frmShowPersonLicenseHistory";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "License History";
+            this.Load += new System.EventHandler(this.frmLicenseHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picImageUser)).EndInit();
             this.ResumeLayout(false);
 

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crlApplicationInfo1 = new DVLD_Project.crlApplicationInfo();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.crlApplicationInfo1 = new DVLD_Project.crlLocalDrivingLicenseApplicationInfo();
+            this.txtNotes = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnClos = new System.Windows.Forms.Button();
             this.btnIssue = new System.Windows.Forms.Button();
@@ -46,13 +46,13 @@
             this.crlApplicationInfo1.Size = new System.Drawing.Size(869, 364);
             this.crlApplicationInfo1.TabIndex = 0;
             // 
-            // textBox1
+            // txtNotes
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 387);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(704, 129);
-            this.textBox1.TabIndex = 197;
+            this.txtNotes.Location = new System.Drawing.Point(174, 387);
+            this.txtNotes.Multiline = true;
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Size = new System.Drawing.Size(704, 129);
+            this.txtNotes.TabIndex = 197;
             // 
             // label7
             // 
@@ -98,6 +98,7 @@
             this.btnIssue.TabIndex = 198;
             this.btnIssue.Text = "    Issue";
             this.btnIssue.UseVisualStyleBackColor = false;
+            this.btnIssue.Click += new System.EventHandler(this.btnIssue_Click);
             // 
             // pictureBox9
             // 
@@ -118,7 +119,7 @@
             this.ClientSize = new System.Drawing.Size(890, 571);
             this.Controls.Add(this.btnClos);
             this.Controls.Add(this.btnIssue);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.crlApplicationInfo1);
@@ -128,6 +129,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Issue DrivingL icense for The First Time";
+            this.Load += new System.EventHandler(this.frmIssuedDrivingLicense_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -136,8 +138,8 @@
 
         #endregion
 
-        private crlApplicationInfo crlApplicationInfo1;
-        private System.Windows.Forms.TextBox textBox1;
+        private crlLocalDrivingLicenseApplicationInfo crlApplicationInfo1;
+        private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnClos;

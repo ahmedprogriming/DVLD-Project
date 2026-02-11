@@ -558,6 +558,7 @@
             this.dateTime.Size = new System.Drawing.Size(162, 28);
             this.dateTime.TabIndex = 105;
             this.dateTime.Value = new System.DateTime(2000, 1, 2, 0, 0, 0, 0);
+            this.dateTime.ValueChanged += new System.EventHandler(this.dateTime_ValueChanged);
             // 
             // frmAddEditePerson
             // 

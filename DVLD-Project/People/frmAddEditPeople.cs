@@ -325,6 +325,11 @@ namespace DVLD_Project
         {
 
         }
+
+        private void dateTime_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

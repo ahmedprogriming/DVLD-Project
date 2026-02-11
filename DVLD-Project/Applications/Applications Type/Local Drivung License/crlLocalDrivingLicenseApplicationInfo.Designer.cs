@@ -1,6 +1,6 @@
 ﻿namespace DVLD_Project
 {
-    partial class crlApplicationInfo
+    partial class crlLocalDrivingLicenseApplicationInfo
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,7 +32,6 @@
             this.lblPassedTest = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLicenseInfo = new System.Windows.Forms.LinkLabel();
-            this.lbl = new System.Windows.Forms.Label();
             this.lblAppliedForLicense = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -89,7 +88,6 @@
             this.groDrivingLicenseApp.Controls.Add(this.lblPassedTest);
             this.groDrivingLicenseApp.Controls.Add(this.pictureBox1);
             this.groDrivingLicenseApp.Controls.Add(this.linkLicenseInfo);
-            this.groDrivingLicenseApp.Controls.Add(this.lbl);
             this.groDrivingLicenseApp.Controls.Add(this.lblAppliedForLicense);
             this.groDrivingLicenseApp.Controls.Add(this.pictureBox4);
             this.groDrivingLicenseApp.Controls.Add(this.label22);
@@ -139,17 +137,6 @@
             this.linkLicenseInfo.TabStop = true;
             this.linkLicenseInfo.Text = "Show License Info";
             this.linkLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLicenseInfo_LinkClicked);
-            // 
-            // lbl
-            // 
-            this.lbl.AutoSize = true;
-            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.Location = new System.Drawing.Point(617, 100);
-            this.lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(29, 25);
-            this.lbl.TabIndex = 165;
-            this.lbl.Text = "/3";
             // 
             // lblAppliedForLicense
             // 
@@ -540,7 +527,7 @@
             this.label10.TabIndex = 142;
             this.label10.Text = "Status:";
             // 
-            // crlApplicationInfo
+            // crlLocalDrivingLicenseApplicationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -548,7 +535,7 @@
             this.Controls.Add(this.groInformtionPeople);
             this.Controls.Add(this.groDrivingLicenseApp);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "crlApplicationInfo";
+            this.Name = "crlLocalDrivingLicenseApplicationInfo";
             this.Size = new System.Drawing.Size(869, 364);
             this.groDrivingLicenseApp.ResumeLayout(false);
             this.groDrivingLicenseApp.PerformLayout();
@@ -574,7 +561,6 @@
 
         private System.Windows.Forms.GroupBox groDrivingLicenseApp;
         private System.Windows.Forms.LinkLabel linkLicenseInfo;
-        private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label lblAppliedForLicense;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label22;

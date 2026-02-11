@@ -45,7 +45,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAddAppointements = new System.Windows.Forms.Button();
             this.picImageUser = new System.Windows.Forms.PictureBox();
-            this.crlApplicationInfo1 = new DVLD_Project.crlApplicationInfo();
+            this.crlApplicationInfo1 = new DVLD_Project.crlLocalDrivingLicenseApplicationInfo();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointements)).BeginInit();
             this.tmsAppointements.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImageUser)).BeginInit();
@@ -116,22 +116,23 @@
             this.editToolStripMenuItem,
             this.tackToolStripMenuItem});
             this.tmsAppointements.Name = "tmsAppointements";
-            this.tmsAppointements.Size = new System.Drawing.Size(154, 80);
+            this.tmsAppointements.Size = new System.Drawing.Size(227, 108);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Image = global::DVLD_Project.Properties.Resources.edit_322;
             this.editToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(153, 38);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(226, 38);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // tackToolStripMenuItem
             // 
             this.tackToolStripMenuItem.Image = global::DVLD_Project.Properties.Resources.Test_32;
             this.tackToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tackToolStripMenuItem.Name = "tackToolStripMenuItem";
-            this.tackToolStripMenuItem.Size = new System.Drawing.Size(153, 38);
+            this.tackToolStripMenuItem.Size = new System.Drawing.Size(226, 38);
             this.tackToolStripMenuItem.Text = "Take Test";
             this.tackToolStripMenuItem.Click += new System.EventHandler(this.tackToolStripMenuItem_Click);
             // 
@@ -293,6 +294,6 @@
         private System.Windows.Forms.ContextMenuStrip tmsAppointements;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tackToolStripMenuItem;
-        private crlApplicationInfo crlApplicationInfo1;
+        private crlLocalDrivingLicenseApplicationInfo crlApplicationInfo1;
     }
 }

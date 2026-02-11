@@ -63,6 +63,7 @@
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(201, 28);
             this.txtFilter.TabIndex = 3;
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
             // cbFilter
             // 

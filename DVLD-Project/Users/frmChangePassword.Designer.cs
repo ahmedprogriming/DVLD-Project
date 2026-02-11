@@ -112,6 +112,7 @@
             this.txtCurrentPassword.PasswordChar = '*';
             this.txtCurrentPassword.Size = new System.Drawing.Size(164, 27);
             this.txtCurrentPassword.TabIndex = 82;
+            this.txtCurrentPassword.TextChanged += new System.EventHandler(this.txtCurrentPassword_TextChanged);
             this.txtCurrentPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtCurrentPassword_Validating);
             // 
             // pictureBox3

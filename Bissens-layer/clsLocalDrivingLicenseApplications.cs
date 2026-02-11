@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Business_Layer;
@@ -19,7 +20,8 @@ namespace Bissens_layer
 
         public int LocalDrivingLicenseApplicationID { get; set; }
         public int LicenseClassID { get; set; }
-        public clsLicenseClass clsLicenseClass { get; set; }
+        public clsLicenseClass LicenseClassInfo { get; set; }
+     
         public string FullName {
 
             get
@@ -49,7 +51,8 @@ namespace Bissens_layer
             this.LastStatusDate = LastStatusDate;
             this.PaidFees = PaidFees;
             this.CreatedByUserID = CreatedByUserID;
-            this.clsLicenseClass = clsLicenseClass.Find(LicenseClassID);
+            this.LicenseClassInfo = clsLicenseClass.Find(LicenseClassID);
+            
             _mode = Mode.Update;
         }
 
@@ -137,7 +140,7 @@ namespace Bissens_layer
         {
             return clsLocalDrivingLicenseApplicationsData.DosePassedTestType(ID, (int)testType);
         }
-        public bool DeleteLocalDrivingLicenseApplicationsData()
+        public bool Deleted()
         {
             bool IsLocalDrivingLicenseApplicationsDeleted = false;
             bool IsbaseplicationDeleted = false;
@@ -211,10 +214,10 @@ namespace Bissens_layer
             return clsLocalDrivingLicenseApplicationsData.IsThereAnActiveScheduledTest(this.LocalDrivingLicenseApplicationID, (int)TestTypeID);
         }
 
-        //public bool GetLastTestPerTestType(clsTestType.enTestType attendTestType)
-        //{
-        //    return clsTestType.f
-        //}
+        public clsTest GetLastTestPerTestType(clsTestType.enTestType attendTestType)
+        {
+            return clsTest.FindLastTestPerPersonAndLicenseClass(this.ApplicantPersonID,this.LicenseClassID,attendTestType);
+        }
 
         public static byte GetPassedTestcount(int LocalID)
         {
@@ -234,6 +237,66 @@ namespace Bissens_layer
         public  bool PasedAllTest()
         {
             return clsTest.PassedTestAll(this.LocalDrivingLicenseApplicationID);
+        }
+
+        public int IssueLicenseForTheFirtTime(string Nots,int CurrentUser)
+        {
+            int DriverID = -1;
+            //we check if the driver already there for this person.
+            clsDriver Driver = clsDriver.GetAllDriverByPersonID(this.ApplicantPersonID);
+            if (Driver == null)
+            {
+                Driver = new clsDriver();
+                Driver.CreatedByUserID = CurrentUser;
+                Driver.PersonID = this.ApplicantPersonID;
+                if (Driver.Save())
+                {
+                    DriverID = Driver.DriverID;
+                }
+                else
+                {
+                    return -1;
+                }
+
+            }
+            else
+            {
+                DriverID = Driver.DriverID;
+            }
+
+            //now we diver is there, so we add new licesnse
+                clsLicense _License = new clsLicense();
+
+            _License.ApplicationID = this.ApplicationID;
+            _License.DriverID= DriverID;
+            _License.PaidFees = this.LicenseClassInfo.ClassFess;
+            _License.LicenseClass = this.LicenseClassID;
+            _License.IssueDate = DateTime.Now;
+            _License.ExpirationDate = DateTime.Now.AddYears(this.LicenseClassInfo.DefaultValidityLength);
+            _License.Notes = Nots;
+            _License.IsActive = true;
+            _License.IssueReason = clsLicense.enIssueReason.FirstTime;
+            _License.CreatedByUserID = CurrentUser;
+
+            if (_License.Save())
+            {
+                this.SetComblet();
+                return _License.LicenseID;
+            }
+            else
+            {
+                return -1;
+            }
+         
+
+        }
+        public bool IsLicenseIssue()
+        {
+            return (GetActiveLicenseID() != -1);
+        }
+        public int GetActiveLicenseID()
+        {
+            return clsLicense.GetActiveLicenseIDByPersonID(this.ApplicantPersonID,this.LicenseClassID);
         }
 
     }

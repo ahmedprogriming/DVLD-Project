@@ -1,22 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DataAcess_Layer
 {
-    public class clsLicenseClassData
+    public class clsDriverData
     {
-        public static DataTable GetAllLicenseClass()
+        public static DataTable GetAllDriver()
         {
             DataTable dataTable = new DataTable();
 
             SqlConnection connection = new SqlConnection(clsCounection.CounectionString);
 
-            string qury = "select * from LicenseClasses order by ClassName;";
+            string qury = "select * from Drivers_View";
 
             SqlCommand command = new SqlCommand(qury, connection);
 
@@ -40,15 +41,15 @@ namespace DataAcess_Layer
             return dataTable;
         }
 
-        public static bool GetLicenseClassByID(int ID, ref string ClassName,ref int minmAge,ref int DefaultValidityLength, ref float ClassFees,ref string ClassDescription)
+        public static bool GetAllDriveByID(int DriverID,ref int PersonID, ref int CreatedByUserID, ref DateTime CreatedDate)
         {
             bool IsFound = false;
             SqlConnection connection = new SqlConnection(clsCounection.CounectionString);
 
-            string query = "Select * From LicenseClasses  Where LicenseClassID=@LicenseClassID;";
+            string query = "Select * From Drivers  Where DriverID=@DriverID;";
 
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@LicenseClassID", ID);
+            command.Parameters.AddWithValue("@DriverID", DriverID);
 
             try
             {
@@ -59,11 +60,50 @@ namespace DataAcess_Layer
                 if (reader.Read())
                 {
                     IsFound = true;
-                    ClassName = (String)reader["ClassName"];
-                    ClassDescription = (string)reader["ClassDescription"];
-                    minmAge = (int)reader["MinimumAllowedAge"];
-                    DefaultValidityLength = (int)reader["DefaultValidityLength"];
-                    ClassFees = Convert.ToSingle( reader["ClassFees"]);
+                    PersonID = (int)reader["PersonID"];
+                    CreatedByUserID = (int)reader["CreatedByUserID"];
+                    CreatedDate = (DateTime)reader["CreatedDate"];
+
+                }
+                else
+                {
+                    IsFound = false;
+                }
+                reader.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            { connection.Close(); }
+            return IsFound;
+
+        }
+
+        public static bool GetAllDriveByPersonID(int PersonID, ref int DriverID, ref int CreatedByUserID, ref DateTime CreatedDate)
+        {
+            bool IsFound = false;
+            SqlConnection connection = new SqlConnection(clsCounection.CounectionString);
+
+            string query = "Select * From Drivers  Where PersonID=@PersonID;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    IsFound = true;
+                    DriverID = (int)reader["DriverID"];
+                    CreatedByUserID = (int)reader["CreatedByUserID"];
+                    CreatedDate = (DateTime)reader["CreatedDate"];
 
                 }
                 else
@@ -81,68 +121,23 @@ namespace DataAcess_Layer
             { connection.Close(); }
             return IsFound;
         }
-
-        public static bool GetLicenseClassByClassName(string ClassName, ref int ID, ref int minmAge,ref int DefaultValidityLength, ref float ClassFees,ref string ClassDescription)
+        public static int AddNewDriver(int PersonID,int CreatedByUserID,DateTime CreatedDate)
         {
-            bool IsFound = false;
+            int DriverID = -1;
             SqlConnection connection = new SqlConnection(clsCounection.CounectionString);
 
-            string query = "Select * From LicenseClasses  Where ClassName=@ClassName;";
-
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@ClassName", ClassName);
-
-            try
-            {
-                connection.Open();
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.Read())
-                {
-                    IsFound = true;
-                    ID = (int)reader["LicenseClassID"];
-                    minmAge = (int)reader["MinimumAllowedAge"];
-                    DefaultValidityLength = (int)reader["DefaultValidityLength"];
-                    ClassFees = Convert.ToSingle(reader["ClassFees"]);
-                    ClassDescription = (string)reader["ClassDescription"];
-
-                }
-                else
-                {
-                    IsFound = false;
-                }
-                reader.Close();
-
-
-            }
-            catch (Exception ex)
-            {
-            }
-            finally
-            { connection.Close(); }
-            return IsFound;
-        }
-
-        public static int AddNewLicenseClass(string ClassName, int minmAge, int DefaultValidityLength, float ClassFees,string ClassDescription)
-        {
-            int LicenseClassID = -1;
-            SqlConnection connection = new SqlConnection(clsCounection.CounectionString);
-
-            string query = @"INSERT INTO LicenseClasses ( 
-                            ClassName,MinimumAllowedAge,ClassFees,DefaultValidityLength,ClassDescription)
-                             VALUES (@ClassName,@MinimumAllowedAge,@ClassFees,@DefaultValidityLength,@ClassDescription);
+            string query = @"INSERT INTO Drivers ( 
+                            PersonID,CreatedByUserID,CreatedDate)
+                             VALUES (@PersonID,@CreatedByUserID,@CreatedDate);
                              SELECT SCOPE_IDENTITY();";
 
 
             SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("@ClassName", ClassName);
-            command.Parameters.AddWithValue("@MinimumAllowedAge", minmAge);
-            command.Parameters.AddWithValue("@ClassFees", ClassFees);
-            command.Parameters.AddWithValue("@DefaultValidityLength", DefaultValidityLength);
-            command.Parameters.AddWithValue("@ClassDescription", ClassDescription);
-
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+            command.Parameters.AddWithValue("@CreatedDate", CreatedDate);
+         
             try
             {
                 connection.Open();
@@ -150,7 +145,7 @@ namespace DataAcess_Layer
 
                 if (result != null && int.TryParse(result.ToString(), out int autoID))
                 {
-                    LicenseClassID = autoID;
+                    DriverID = autoID;
                 }
             }
             catch (Exception ex)
@@ -161,28 +156,27 @@ namespace DataAcess_Layer
             {
                 connection.Close();
             }
-            return LicenseClassID;
+            return DriverID;
         }
 
-        public static bool UpdateLicenseClass(int ID,  string ClassName,  int minmAge, int DefaultValidityLength, float ClassFees,string ClassDescription)
+        public static bool UpdateDriver(int DriverID,int PersonID, int CreatedByUserID)
         {
             int Rowafcted = 0;
 
 
             SqlConnection connection = new SqlConnection(clsCounection.CounectionString);
 
-            string qury = @"UPDATE LicenseClasses 
+            string qury = @"UPDATE Drivers 
 Set 
-ClassName=@ClassName,MinimumAllowedAge=@MinimumAllowedAge,
-ClassFees=@ClassFees,DefaultValidityLength=@DefaultValidityLength,ClassDescription=@ClassDescription WHERE LicenseClassID = @LicenseClassID;";
+PersonID=@PersonID,CreatedByUserID=@CreatedByUserID
+ WHERE DriverID = @DriverID;";
 
             SqlCommand command = new SqlCommand(qury, connection);
-            command.Parameters.AddWithValue("@LicenseClassID", ID);
-            command.Parameters.AddWithValue("@ClassName", ClassName);
-            command.Parameters.AddWithValue("@MinimumAllowedAge", minmAge);
-            command.Parameters.AddWithValue("@ClassFees", ClassFees);
-            command.Parameters.AddWithValue("@DefaultValidityLength", DefaultValidityLength);
-            command.Parameters.AddWithValue("@ClassDescription", ClassDescription);
+            command.Parameters.AddWithValue("@DriverID", DriverID);
+            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+       
+
             try
             {
                 connection.Open();
@@ -197,6 +191,7 @@ ClassFees=@ClassFees,DefaultValidityLength=@DefaultValidityLength,ClassDescripti
                 connection.Close();
             }
             return (Rowafcted > 0);
+
         }
     }
 }

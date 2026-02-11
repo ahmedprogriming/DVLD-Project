@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labRecodLDLApp = new System.Windows.Forms.Label();
             this.lblNumberRecords = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,8 +43,12 @@
             this.dgvManagerDrivers = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
             this.picImageUser = new System.Windows.Forms.PictureBox();
+            this.MSDrivers = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmShowPersonDetiles = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmpersonHistory = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManagerDrivers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImageUser)).BeginInit();
+            this.MSDrivers.SuspendLayout();
             this.SuspendLayout();
             // 
             // labRecodLDLApp
@@ -110,6 +115,7 @@
             this.txbFilter.Name = "txbFilter";
             this.txbFilter.Size = new System.Drawing.Size(190, 24);
             this.txbFilter.TabIndex = 108;
+            this.txbFilter.TextChanged += new System.EventHandler(this.txbFilter_TextChanged);
             // 
             // cobFilterDrivers
             // 
@@ -129,6 +135,7 @@
             this.cobFilterDrivers.Name = "cobFilterDrivers";
             this.cobFilterDrivers.Size = new System.Drawing.Size(163, 26);
             this.cobFilterDrivers.TabIndex = 107;
+            this.cobFilterDrivers.SelectedIndexChanged += new System.EventHandler(this.cobFilterDrivers_SelectedIndexChanged);
             // 
             // lblTitel
             // 
@@ -149,37 +156,38 @@
             this.dgvManagerDrivers.AllowUserToResizeRows = false;
             this.dgvManagerDrivers.BackgroundColor = System.Drawing.Color.White;
             this.dgvManagerDrivers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvManagerDrivers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvManagerDrivers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvManagerDrivers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvManagerDrivers.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvManagerDrivers.ContextMenuStrip = this.MSDrivers;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvManagerDrivers.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvManagerDrivers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvManagerDrivers.GridColor = System.Drawing.Color.White;
             this.dgvManagerDrivers.Location = new System.Drawing.Point(18, 309);
             this.dgvManagerDrivers.MultiSelect = false;
             this.dgvManagerDrivers.Name = "dgvManagerDrivers";
             this.dgvManagerDrivers.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvManagerDrivers.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvManagerDrivers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvManagerDrivers.RowHeadersWidth = 51;
             this.dgvManagerDrivers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvManagerDrivers.Size = new System.Drawing.Size(1164, 342);
@@ -202,6 +210,7 @@
             this.btnClose.TabIndex = 114;
             this.btnClose.Text = "    Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // picImageUser
             // 
@@ -213,6 +222,36 @@
             this.picImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picImageUser.TabIndex = 104;
             this.picImageUser.TabStop = false;
+            // 
+            // MSDrivers
+            // 
+            this.MSDrivers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MSDrivers.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.MSDrivers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmShowPersonDetiles,
+            this.tsmpersonHistory});
+            this.MSDrivers.Name = "contextMenuStrip1";
+            this.MSDrivers.Size = new System.Drawing.Size(320, 80);
+            // 
+            // tsmShowPersonDetiles
+            // 
+            this.tsmShowPersonDetiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmShowPersonDetiles.Image = global::DVLD_Project.Properties.Resources.PersonDetails_32;
+            this.tsmShowPersonDetiles.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmShowPersonDetiles.Name = "tsmShowPersonDetiles";
+            this.tsmShowPersonDetiles.Size = new System.Drawing.Size(319, 38);
+            this.tsmShowPersonDetiles.Text = "Show Person Details";
+            this.tsmShowPersonDetiles.Click += new System.EventHandler(this.tsmShowPersonDetiles_Click);
+            // 
+            // tsmpersonHistory
+            // 
+            this.tsmpersonHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmpersonHistory.Image = global::DVLD_Project.Properties.Resources.PersonLicenseHistory_32;
+            this.tsmpersonHistory.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmpersonHistory.Name = "tsmpersonHistory";
+            this.tsmpersonHistory.Size = new System.Drawing.Size(319, 38);
+            this.tsmpersonHistory.Text = "Show Person License History";
+            this.tsmpersonHistory.Click += new System.EventHandler(this.tsmpersonHistory_Click);
             // 
             // frmListDriverscs
             // 
@@ -238,8 +277,10 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List Driverscs";
+            this.Load += new System.EventHandler(this.frmListDriverscs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvManagerDrivers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImageUser)).EndInit();
+            this.MSDrivers.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +299,8 @@
         private System.Windows.Forms.Label lblTitel;
         private System.Windows.Forms.DataGridView dgvManagerDrivers;
         private System.Windows.Forms.PictureBox picImageUser;
+        private System.Windows.Forms.ContextMenuStrip MSDrivers;
+        private System.Windows.Forms.ToolStripMenuItem tsmShowPersonDetiles;
+        private System.Windows.Forms.ToolStripMenuItem tsmpersonHistory;
     }
 }

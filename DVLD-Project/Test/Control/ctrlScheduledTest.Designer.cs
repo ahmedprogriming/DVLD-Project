@@ -1,13 +1,13 @@
 ﻿namespace DVLD_Project
 {
-    partial class frmScheduleTest
+    partial class ctrlScheduledTest
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,18 +20,19 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.groScheduleTest = new System.Windows.Forms.GroupBox();
-            this.lblError = new System.Windows.Forms.Label();
+            this.groRatakeTest = new System.Windows.Forms.GroupBox();
+            this.lblTestID = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.crlRetakeTest1 = new DVLD_Project.crlRetakeTest();
             this.dateAppoinmentens = new System.Windows.Forms.DateTimePicker();
             this.lblTrial = new System.Windows.Forms.Label();
             this.lblFees = new System.Windows.Forms.Label();
@@ -42,7 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitel = new System.Windows.Forms.Label();
-            this.picImageTest = new System.Windows.Forms.PictureBox();
+            this.picImageUser = new System.Windows.Forms.PictureBox();
             this.lblDClass = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,62 +53,83 @@
             this.lblDLApID = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnClos = new System.Windows.Forms.Button();
-            this.groScheduleTest.SuspendLayout();
+            this.groRatakeTest.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageTest)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImageUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
-            // groScheduleTest
+            // groRatakeTest
             // 
-            this.groScheduleTest.BackColor = System.Drawing.Color.White;
-            this.groScheduleTest.Controls.Add(this.lblError);
-            this.groScheduleTest.Controls.Add(this.btnSave);
-            this.groScheduleTest.Controls.Add(this.crlRetakeTest1);
-            this.groScheduleTest.Controls.Add(this.dateAppoinmentens);
-            this.groScheduleTest.Controls.Add(this.lblTrial);
-            this.groScheduleTest.Controls.Add(this.lblFees);
-            this.groScheduleTest.Controls.Add(this.pictureBox5);
-            this.groScheduleTest.Controls.Add(this.pictureBox4);
-            this.groScheduleTest.Controls.Add(this.pictureBox2);
-            this.groScheduleTest.Controls.Add(this.label4);
-            this.groScheduleTest.Controls.Add(this.label2);
-            this.groScheduleTest.Controls.Add(this.label1);
-            this.groScheduleTest.Controls.Add(this.lblTitel);
-            this.groScheduleTest.Controls.Add(this.picImageTest);
-            this.groScheduleTest.Controls.Add(this.lblDClass);
-            this.groScheduleTest.Controls.Add(this.label3);
-            this.groScheduleTest.Controls.Add(this.pictureBox1);
-            this.groScheduleTest.Controls.Add(this.pictureBox3);
-            this.groScheduleTest.Controls.Add(this.lblName);
-            this.groScheduleTest.Controls.Add(this.label6);
-            this.groScheduleTest.Controls.Add(this.lblDLApID);
-            this.groScheduleTest.Controls.Add(this.pictureBox6);
-            this.groScheduleTest.Controls.Add(this.label9);
-            this.groScheduleTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groScheduleTest.Location = new System.Drawing.Point(32, 50);
-            this.groScheduleTest.Name = "groScheduleTest";
-            this.groScheduleTest.Size = new System.Drawing.Size(556, 639);
-            this.groScheduleTest.TabIndex = 4;
-            this.groScheduleTest.TabStop = false;
-            this.groScheduleTest.Text = "Retake Test Info";
+            this.groRatakeTest.BackColor = System.Drawing.Color.White;
+            this.groRatakeTest.Controls.Add(this.lblTestID);
+            this.groRatakeTest.Controls.Add(this.pictureBox7);
+            this.groRatakeTest.Controls.Add(this.label5);
+            this.groRatakeTest.Controls.Add(this.btnSave);
+            this.groRatakeTest.Controls.Add(this.dateAppoinmentens);
+            this.groRatakeTest.Controls.Add(this.lblTrial);
+            this.groRatakeTest.Controls.Add(this.lblFees);
+            this.groRatakeTest.Controls.Add(this.pictureBox5);
+            this.groRatakeTest.Controls.Add(this.pictureBox4);
+            this.groRatakeTest.Controls.Add(this.pictureBox2);
+            this.groRatakeTest.Controls.Add(this.label4);
+            this.groRatakeTest.Controls.Add(this.label2);
+            this.groRatakeTest.Controls.Add(this.label1);
+            this.groRatakeTest.Controls.Add(this.lblTitel);
+            this.groRatakeTest.Controls.Add(this.picImageUser);
+            this.groRatakeTest.Controls.Add(this.lblDClass);
+            this.groRatakeTest.Controls.Add(this.label3);
+            this.groRatakeTest.Controls.Add(this.pictureBox1);
+            this.groRatakeTest.Controls.Add(this.pictureBox3);
+            this.groRatakeTest.Controls.Add(this.lblName);
+            this.groRatakeTest.Controls.Add(this.label6);
+            this.groRatakeTest.Controls.Add(this.lblDLApID);
+            this.groRatakeTest.Controls.Add(this.pictureBox6);
+            this.groRatakeTest.Controls.Add(this.label9);
+            this.groRatakeTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groRatakeTest.Location = new System.Drawing.Point(3, 3);
+            this.groRatakeTest.Name = "groRatakeTest";
+            this.groRatakeTest.Size = new System.Drawing.Size(556, 510);
+            this.groRatakeTest.TabIndex = 6;
+            this.groRatakeTest.TabStop = false;
+            this.groRatakeTest.Text = "Vision Test";
             // 
-            // lblError
+            // lblTestID
             // 
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.ForeColor = System.Drawing.Color.Crimson;
-            this.lblError.Location = new System.Drawing.Point(236, 226);
-            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(55, 20);
-            this.lblError.TabIndex = 187;
-            this.lblError.Text = "[????]";
+            this.lblTestID.AutoSize = true;
+            this.lblTestID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestID.Location = new System.Drawing.Point(206, 453);
+            this.lblTestID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTestID.Name = "lblTestID";
+            this.lblTestID.Size = new System.Drawing.Size(68, 25);
+            this.lblTestID.TabIndex = 189;
+            this.lblTestID.Text = "[????]";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::DVLD_Project.Properties.Resources.Number_32;
+            this.pictureBox7.Location = new System.Drawing.Point(170, 453);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 188;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(80, 454);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 25);
+            this.label5.TabIndex = 187;
+            this.label5.Text = "Test ID:";
             // 
             // btnSave
             // 
@@ -125,16 +147,6 @@
             this.btnSave.TabIndex = 186;
             this.btnSave.Text = "    Save";
             this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // crlRetakeTest1
-            // 
-            this.crlRetakeTest1.BackColor = System.Drawing.Color.White;
-            this.crlRetakeTest1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.crlRetakeTest1.Location = new System.Drawing.Point(0, 471);
-            this.crlRetakeTest1.Name = "crlRetakeTest1";
-            this.crlRetakeTest1.Size = new System.Drawing.Size(552, 124);
-            this.crlRetakeTest1.TabIndex = 185;
             // 
             // dateAppoinmentens
             // 
@@ -234,7 +246,7 @@
             // 
             this.lblTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitel.ForeColor = System.Drawing.Color.Red;
-            this.lblTitel.Location = new System.Drawing.Point(115, 175);
+            this.lblTitel.Location = new System.Drawing.Point(111, 178);
             this.lblTitel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitel.Name = "lblTitel";
             this.lblTitel.Size = new System.Drawing.Size(331, 51);
@@ -242,16 +254,16 @@
             this.lblTitel.Text = "Schedule Test";
             this.lblTitel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // picImageTest
+            // picImageUser
             // 
-            this.picImageTest.Image = global::DVLD_Project.Properties.Resources.Street_Test_321;
-            this.picImageTest.Location = new System.Drawing.Point(144, 12);
-            this.picImageTest.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.picImageTest.Name = "picImageTest";
-            this.picImageTest.Size = new System.Drawing.Size(253, 159);
-            this.picImageTest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picImageTest.TabIndex = 173;
-            this.picImageTest.TabStop = false;
+            this.picImageUser.Image = global::DVLD_Project.Properties.Resources.Vision_512;
+            this.picImageUser.Location = new System.Drawing.Point(190, 45);
+            this.picImageUser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.picImageUser.Name = "picImageUser";
+            this.picImageUser.Size = new System.Drawing.Size(152, 108);
+            this.picImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picImageUser.TabIndex = 173;
+            this.picImageUser.TabStop = false;
             // 
             // lblDClass
             // 
@@ -349,45 +361,22 @@
             this.label9.TabIndex = 144;
             this.label9.Text = "Name:";
             // 
-            // btnClos
-            // 
-            this.btnClos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnClos.BackColor = System.Drawing.Color.White;
-            this.btnClos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnClos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnClos.Image = global::DVLD_Project.Properties.Resources.Close_32;
-            this.btnClos.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnClos.Location = new System.Drawing.Point(253, 696);
-            this.btnClos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnClos.Name = "btnClos";
-            this.btnClos.Size = new System.Drawing.Size(133, 41);
-            this.btnClos.TabIndex = 187;
-            this.btnClos.Text = "    Close";
-            this.btnClos.UseVisualStyleBackColor = false;
-            this.btnClos.Click += new System.EventHandler(this.btnClos_Click);
-            // 
-            // frmScheduleTest
+            // ctrlScheduledTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(632, 737);
-            this.Controls.Add(this.btnClos);
-            this.Controls.Add(this.groScheduleTest);
+            this.Controls.Add(this.groRatakeTest);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmScheduleTest";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Schedule Test";
-            this.Load += new System.EventHandler(this.frmScheduleTest_Load);
-            this.groScheduleTest.ResumeLayout(false);
-            this.groScheduleTest.PerformLayout();
+            this.Name = "ctrlScheduledTest";
+            this.Size = new System.Drawing.Size(564, 518);
+            this.groRatakeTest.ResumeLayout(false);
+            this.groRatakeTest.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageTest)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImageUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -397,7 +386,22 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groScheduleTest;
+        private System.Windows.Forms.GroupBox groRatakeTest;
+        private System.Windows.Forms.Label lblTestID;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DateTimePicker dateAppoinmentens;
+        private System.Windows.Forms.Label lblTrial;
+        private System.Windows.Forms.Label lblFees;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitel;
+        private System.Windows.Forms.PictureBox picImageUser;
         private System.Windows.Forms.Label lblDClass;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -407,20 +411,5 @@
         private System.Windows.Forms.Label lblDLApID;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox picImageTest;
-        private System.Windows.Forms.Label lblTitel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblTrial;
-        private System.Windows.Forms.Label lblFees;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private crlRetakeTest crlRetakeTest1;
-        private System.Windows.Forms.DateTimePicker dateAppoinmentens;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnClos;
-        private System.Windows.Forms.Label lblError;
     }
 }

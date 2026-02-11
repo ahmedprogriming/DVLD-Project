@@ -15,19 +15,27 @@ namespace Bissens_layer
         private Mode _mode = Mode.AddNew;
 
      public int TestAppointmentID { get; set; }
-          public  int TestTypeID { get; set; }
+          public clsTestType.enTestType TestTypeID { get; set; }
           public  int LocalDrivingLicenseApplicationID { get; set; }
           public  DateTime AppointmentDate { get; set; }
            public float PaidFees { get; set; }
          public int CreatedByUserID { get; set; }
         public int RetakeTestApplicationID { get; set; }
-             public clsTestType TestTypeInfo { get; set; }
+             public clsApplication RetakeTestAppInfo { get; set; }
       public  bool IsLocked { get; set; }
+        public int TestID
+        {
+            get
+            {
+                return _GetTestID();
+            }
+        }
+
 
         public clsAppointemntsTests()
         {
             this.TestAppointmentID = -1;
-            this.TestTypeID = -1;
+            this.TestTypeID = clsTestType.enTestType.VisionTest;
             this.LocalDrivingLicenseApplicationID = -1;
             this.AppointmentDate = DateTime.Now;
             this.PaidFees = 0;
@@ -37,7 +45,7 @@ namespace Bissens_layer
             _mode = Mode.AddNew;
         }
 
-        public clsAppointemntsTests(int testAppointmentID, int testTypeID, int localDrivingLicenseApplicationID, 
+        public clsAppointemntsTests(int testAppointmentID, clsTestType.enTestType testTypeID, int localDrivingLicenseApplicationID, 
             DateTime appointmentDate, float paidFees, int createdByUserID,bool isLocked,int retakeTestApplicationID)
         {
            
@@ -49,27 +57,37 @@ namespace Bissens_layer
             CreatedByUserID = createdByUserID;
             RetakeTestApplicationID= retakeTestApplicationID;
             IsLocked = isLocked;
-            TestTypeInfo = clsTestType.FindTestTypeID((clsTestType.enTestType) testTypeID);
+            RetakeTestAppInfo = clsApplication.FindApplicationByID(RetakeTestApplicationID);
             _mode = Mode.Update;
         }
 
-        public static DataTable GatAllAppointemnt(int LocalDrivingLAppID)
+        public static DataTable GatAllAppointemnt()
         {
-            return clsAppointemntsTestsData.GetAllAppointemntTestByID(LocalDrivingLAppID);
+            return clsAppointemntsTestsData.GetAllAppointemntTest();
         }
 
-        public static clsAppointemntsTests FindByID(int LocalDrivingLAppID)
+        public static DataTable GetApplicationTestAppointmentPerTestType(int LocalDrivingLAppID, clsTestType.enTestType testTypeID)
+        {
+            return clsAppointemntsTestsData.GetApplicationTestAppointmentPerTestType(LocalDrivingLAppID, (int)testTypeID);
+        }
+
+        public  DataTable GetApplicationTestAppointmentPerTestType(clsTestType.enTestType testTypeID)
+        {
+            return clsAppointemntsTestsData.GetApplicationTestAppointmentPerTestType(this.LocalDrivingLicenseApplicationID, (int)testTypeID);
+        }
+
+        public static clsAppointemntsTests FindBylocalDrivingLicenseAppID(int LocalDrivingLAppID, clsTestType.enTestType testTypeID)
         {
             int testAppointmentID = -1;
             DateTime appointmentDate = DateTime.Now;
             float paidFees = 0;
             bool isLocked = false;
-            int testTypeID = -1;
+          
             int createdByUserID = -1;
             int RetakeTestApplicationID = -1;
 
-            if (clsAppointemntsTestsData.GetAllAppointment(LocalDrivingLAppID,ref testAppointmentID,ref appointmentDate,ref paidFees,ref isLocked,
-               ref testTypeID,ref createdByUserID,ref RetakeTestApplicationID))
+            if (clsAppointemntsTestsData.GetAllAppointemntTestByLocalDrivingAppID(LocalDrivingLAppID,(int) testTypeID, ref testAppointmentID,ref appointmentDate,ref paidFees,ref isLocked,
+                ref createdByUserID,ref RetakeTestApplicationID))
             {
                 return new clsAppointemntsTests(testAppointmentID, testTypeID, LocalDrivingLAppID, appointmentDate, paidFees,
                 createdByUserID, isLocked, RetakeTestApplicationID);
@@ -83,9 +101,9 @@ namespace Bissens_layer
 
         }
 
-        public  clsAppointemntsTests FindByID()
+        public static clsAppointemntsTests Find(int testAppointmentID)
         {
-            int testAppointmentID = -1;
+            int LocalDrivingLAppID = -1;
             DateTime appointmentDate = DateTime.Now;
             float paidFees = 0;
             bool isLocked = false;
@@ -93,10 +111,10 @@ namespace Bissens_layer
             int createdByUserID = -1;
             int RetakeTestApplicationID = -1;
 
-            if (clsAppointemntsTestsData.GetAllAppointment(this.LocalDrivingLicenseApplicationID, ref testAppointmentID, ref appointmentDate, ref paidFees, ref isLocked,
+            if (clsAppointemntsTestsData.GetAllAppointemntTestByTestAppointmentID(testAppointmentID, ref LocalDrivingLAppID, ref appointmentDate, ref paidFees, ref isLocked,
                ref testTypeID, ref createdByUserID, ref RetakeTestApplicationID))
             {
-                return new clsAppointemntsTests(testAppointmentID, testTypeID,this.LocalDrivingLicenseApplicationID, appointmentDate, paidFees,
+                return new clsAppointemntsTests(testAppointmentID,(clsTestType.enTestType) testTypeID, LocalDrivingLAppID, appointmentDate, paidFees,
                 createdByUserID, isLocked, RetakeTestApplicationID);
             }
             else
@@ -104,21 +122,46 @@ namespace Bissens_layer
                 return null;
             }
 
+        }
+        public static clsAppointemntsTests FindLastTestAppointmentID(int LocalDrivingLAppID, clsTestType.enTestType testTypeID)
+        {
+            int testAppointmentID = -1;
+            DateTime appointmentDate = DateTime.Now;
+            float paidFees = 0;
+            bool isLocked = false;
+         
+            int createdByUserID = -1;
+            int RetakeTestApplicationID = -1;
 
+            if (clsAppointemntsTestsData.GetLastApoointmneTest(LocalDrivingLAppID,(int)  testTypeID,ref testAppointmentID, ref appointmentDate, ref paidFees, ref isLocked,
+                ref createdByUserID, ref RetakeTestApplicationID))
+            {
+                return new clsAppointemntsTests(testAppointmentID, (clsTestType.enTestType)testTypeID, LocalDrivingLAppID, appointmentDate, paidFees,
+                createdByUserID, isLocked, RetakeTestApplicationID);
+            }
+            else
+            {
+                return null;
+            }
 
         }
 
+
+
+
+
+
         private bool _AddNewAppointemntsTest()
         {
-            this.TestAppointmentID=clsAppointemntsTestsData.AddNewAppointemntTest(this.TestTypeID,this.LocalDrivingLicenseApplicationID,
+            this.TestAppointmentID=clsAppointemntsTestsData.AddNewAppointemntTest((int)this.TestTypeID,this.LocalDrivingLicenseApplicationID,
                 this.AppointmentDate,this.PaidFees,this.CreatedByUserID,this.IsLocked,this.RetakeTestApplicationID);
 
-            return (this.TestAppointmentID != 0);
+            return (this.TestAppointmentID != -1);
         }
 
         private bool _UpdateAppointmentsTest()
         {
-            return clsAppointemntsTestsData.UpdateAppointemntTests(this.TestAppointmentID, this.TestTypeID, this.LocalDrivingLicenseApplicationID,
+            return clsAppointemntsTestsData.UpdateAppointemntTests(this.TestAppointmentID,(int) this.TestTypeID, this.LocalDrivingLicenseApplicationID,
                 this.AppointmentDate, this.PaidFees, this.CreatedByUserID, this.IsLocked,this.RetakeTestApplicationID);
         }
 
@@ -149,6 +192,11 @@ namespace Bissens_layer
                     return _UpdateAppointmentsTest();
             }
             return false;
+        }
+
+        private int _GetTestID()
+        {
+            return clsAppointemntsTestsData.GetTestID(TestAppointmentID);
         }
     }
 }

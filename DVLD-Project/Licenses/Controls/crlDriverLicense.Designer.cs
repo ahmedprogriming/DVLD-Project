@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,21 +38,27 @@
             this.groDriverLicense = new System.Windows.Forms.GroupBox();
             this.tbDriverLicense = new System.Windows.Forms.TabControl();
             this.tbLocal = new System.Windows.Forms.TabPage();
+            this.dgvLocalDriverLicense = new System.Windows.Forms.DataGridView();
+            this.label22 = new System.Windows.Forms.Label();
             this.tbInternatuional = new System.Windows.Forms.TabPage();
+            this.grvInternational = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.labRecodLDLApp = new System.Windows.Forms.Label();
             this.lblNumberRecords = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.dgvLocalDriverLicense = new System.Windows.Forms.DataGridView();
-            this.grvInternational = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.MSLocalDrivingLicense = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmShowLocalLicense = new System.Windows.Forms.ToolStripMenuItem();
+            this.MSInterLationalDrivingLicense = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmShowInternationalLicense = new System.Windows.Forms.ToolStripMenuItem();
             this.groDriverLicense.SuspendLayout();
             this.tbDriverLicense.SuspendLayout();
             this.tbLocal.SuspendLayout();
-            this.tbInternatuional.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalDriverLicense)).BeginInit();
+            this.tbInternatuional.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvInternational)).BeginInit();
+            this.MSLocalDrivingLicense.SuspendLayout();
+            this.MSInterLationalDrivingLicense.SuspendLayout();
             this.SuspendLayout();
             // 
             // groDriverLicense
@@ -88,6 +95,63 @@
             this.tbLocal.Text = "Local";
             this.tbLocal.UseVisualStyleBackColor = true;
             // 
+            // dgvLocalDriverLicense
+            // 
+            this.dgvLocalDriverLicense.AllowUserToAddRows = false;
+            this.dgvLocalDriverLicense.AllowUserToDeleteRows = false;
+            this.dgvLocalDriverLicense.AllowUserToResizeRows = false;
+            this.dgvLocalDriverLicense.BackgroundColor = System.Drawing.Color.White;
+            this.dgvLocalDriverLicense.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvLocalDriverLicense.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLocalDriverLicense.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvLocalDriverLicense.ColumnHeadersHeight = 29;
+            this.dgvLocalDriverLicense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvLocalDriverLicense.ContextMenuStrip = this.MSLocalDrivingLicense;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLocalDriverLicense.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvLocalDriverLicense.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvLocalDriverLicense.GridColor = System.Drawing.Color.White;
+            this.dgvLocalDriverLicense.Location = new System.Drawing.Point(11, 43);
+            this.dgvLocalDriverLicense.MultiSelect = false;
+            this.dgvLocalDriverLicense.Name = "dgvLocalDriverLicense";
+            this.dgvLocalDriverLicense.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLocalDriverLicense.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvLocalDriverLicense.RowHeadersWidth = 51;
+            this.dgvLocalDriverLicense.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLocalDriverLicense.Size = new System.Drawing.Size(1077, 176);
+            this.dgvLocalDriverLicense.TabIndex = 143;
+            this.dgvLocalDriverLicense.TabStop = false;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(7, 18);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(278, 22);
+            this.label22.TabIndex = 142;
+            this.label22.Text = "Local Driver Licenses History:";
+            // 
             // tbInternatuional
             // 
             this.tbInternatuional.Controls.Add(this.grvInternational);
@@ -99,6 +163,63 @@
             this.tbInternatuional.TabIndex = 1;
             this.tbInternatuional.Text = "International";
             this.tbInternatuional.UseVisualStyleBackColor = true;
+            // 
+            // grvInternational
+            // 
+            this.grvInternational.AllowUserToAddRows = false;
+            this.grvInternational.AllowUserToDeleteRows = false;
+            this.grvInternational.AllowUserToResizeRows = false;
+            this.grvInternational.BackgroundColor = System.Drawing.Color.White;
+            this.grvInternational.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.grvInternational.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvInternational.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.grvInternational.ColumnHeadersHeight = 29;
+            this.grvInternational.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.grvInternational.ContextMenuStrip = this.MSInterLationalDrivingLicense;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvInternational.DefaultCellStyle = dataGridViewCellStyle5;
+            this.grvInternational.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.grvInternational.GridColor = System.Drawing.Color.White;
+            this.grvInternational.Location = new System.Drawing.Point(11, 45);
+            this.grvInternational.MultiSelect = false;
+            this.grvInternational.Name = "grvInternational";
+            this.grvInternational.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvInternational.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.grvInternational.RowHeadersWidth = 51;
+            this.grvInternational.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grvInternational.Size = new System.Drawing.Size(1077, 176);
+            this.grvInternational.TabIndex = 145;
+            this.grvInternational.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(281, 22);
+            this.label1.TabIndex = 144;
+            this.label1.Text = "International Licenses History:";
             // 
             // labRecodLDLApp
             // 
@@ -144,117 +265,43 @@
             this.label4.TabIndex = 103;
             this.label4.Text = "#";
             // 
-            // label22
+            // MSLocalDrivingLicense
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(7, 18);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(278, 22);
-            this.label22.TabIndex = 142;
-            this.label22.Text = "Local Driver Licenses History:";
+            this.MSLocalDrivingLicense.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MSLocalDrivingLicense.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.MSLocalDrivingLicense.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmShowLocalLicense});
+            this.MSLocalDrivingLicense.Name = "contextMenuStrip1";
+            this.MSLocalDrivingLicense.Size = new System.Drawing.Size(203, 42);
             // 
-            // dgvLocalDriverLicense
+            // tsmShowLocalLicense
             // 
-            this.dgvLocalDriverLicense.AllowUserToAddRows = false;
-            this.dgvLocalDriverLicense.AllowUserToDeleteRows = false;
-            this.dgvLocalDriverLicense.AllowUserToResizeRows = false;
-            this.dgvLocalDriverLicense.BackgroundColor = System.Drawing.Color.White;
-            this.dgvLocalDriverLicense.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvLocalDriverLicense.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLocalDriverLicense.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvLocalDriverLicense.ColumnHeadersHeight = 29;
-            this.dgvLocalDriverLicense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLocalDriverLicense.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvLocalDriverLicense.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvLocalDriverLicense.GridColor = System.Drawing.Color.White;
-            this.dgvLocalDriverLicense.Location = new System.Drawing.Point(11, 43);
-            this.dgvLocalDriverLicense.MultiSelect = false;
-            this.dgvLocalDriverLicense.Name = "dgvLocalDriverLicense";
-            this.dgvLocalDriverLicense.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLocalDriverLicense.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvLocalDriverLicense.RowHeadersWidth = 51;
-            this.dgvLocalDriverLicense.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLocalDriverLicense.Size = new System.Drawing.Size(1077, 176);
-            this.dgvLocalDriverLicense.TabIndex = 143;
-            this.dgvLocalDriverLicense.TabStop = false;
+            this.tsmShowLocalLicense.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmShowLocalLicense.Image = global::DVLD_Project.Properties.Resources.License_View_32;
+            this.tsmShowLocalLicense.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmShowLocalLicense.Name = "tsmShowLocalLicense";
+            this.tsmShowLocalLicense.Size = new System.Drawing.Size(202, 38);
+            this.tsmShowLocalLicense.Text = "Show License";
+            this.tsmShowLocalLicense.Click += new System.EventHandler(this.tsmShowLocalLicense_Click);
             // 
-            // grvInternational
+            // MSInterLationalDrivingLicense
             // 
-            this.grvInternational.AllowUserToAddRows = false;
-            this.grvInternational.AllowUserToDeleteRows = false;
-            this.grvInternational.AllowUserToResizeRows = false;
-            this.grvInternational.BackgroundColor = System.Drawing.Color.White;
-            this.grvInternational.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grvInternational.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvInternational.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.grvInternational.ColumnHeadersHeight = 29;
-            this.grvInternational.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvInternational.DefaultCellStyle = dataGridViewCellStyle5;
-            this.grvInternational.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.grvInternational.GridColor = System.Drawing.Color.White;
-            this.grvInternational.Location = new System.Drawing.Point(11, 45);
-            this.grvInternational.MultiSelect = false;
-            this.grvInternational.Name = "grvInternational";
-            this.grvInternational.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvInternational.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.grvInternational.RowHeadersWidth = 51;
-            this.grvInternational.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvInternational.Size = new System.Drawing.Size(1077, 176);
-            this.grvInternational.TabIndex = 145;
-            this.grvInternational.TabStop = false;
+            this.MSInterLationalDrivingLicense.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MSInterLationalDrivingLicense.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.MSInterLationalDrivingLicense.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmShowInternationalLicense});
+            this.MSInterLationalDrivingLicense.Name = "contextMenuStrip1";
+            this.MSInterLationalDrivingLicense.Size = new System.Drawing.Size(227, 70);
             // 
-            // label1
+            // tsmShowInternationalLicense
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 22);
-            this.label1.TabIndex = 144;
-            this.label1.Text = "International Licenses History:";
+            this.tsmShowInternationalLicense.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmShowInternationalLicense.Image = global::DVLD_Project.Properties.Resources.License_View_32;
+            this.tsmShowInternationalLicense.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmShowInternationalLicense.Name = "tsmShowInternationalLicense";
+            this.tsmShowInternationalLicense.Size = new System.Drawing.Size(226, 38);
+            this.tsmShowInternationalLicense.Text = "Show License";
+            this.tsmShowInternationalLicense.Click += new System.EventHandler(this.tsmShowInternationalLicense_Click);
             // 
             // crlDriverLicense
             // 
@@ -269,14 +316,17 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "crlDriverLicense";
             this.Size = new System.Drawing.Size(1140, 322);
+            this.Load += new System.EventHandler(this.crlDriverLicense_Load);
             this.groDriverLicense.ResumeLayout(false);
             this.tbDriverLicense.ResumeLayout(false);
             this.tbLocal.ResumeLayout(false);
             this.tbLocal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalDriverLicense)).EndInit();
             this.tbInternatuional.ResumeLayout(false);
             this.tbInternatuional.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalDriverLicense)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvInternational)).EndInit();
+            this.MSLocalDrivingLicense.ResumeLayout(false);
+            this.MSInterLationalDrivingLicense.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +346,9 @@
         private System.Windows.Forms.DataGridView dgvLocalDriverLicense;
         private System.Windows.Forms.DataGridView grvInternational;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip MSLocalDrivingLicense;
+        private System.Windows.Forms.ToolStripMenuItem tsmShowLocalLicense;
+        private System.Windows.Forms.ContextMenuStrip MSInterLationalDrivingLicense;
+        private System.Windows.Forms.ToolStripMenuItem tsmShowInternationalLicense;
     }
 }

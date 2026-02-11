@@ -93,5 +93,11 @@ namespace DVLD_Project
             frm.ShowDialog();
 
         }
+
+        private void tsmRetakeTest_Click(object sender, EventArgs e)
+        {
+            frmListLocalDrivingLicenseApplications frm = new frmListLocalDrivingLicenseApplications();
+            frm.ShowDialog();
+        }
     }
 }
