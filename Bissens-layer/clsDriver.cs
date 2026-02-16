@@ -114,9 +114,9 @@ namespace Bissens_layer
             return clsLicenseData.GetDriverLicense(DriverID);
         }
 
-        //public static DataTable GetInternationalLicense(int DriverID)
-        //{
-
-        //}
+        public static DataTable GetInternationalLicense(int DriverID)
+        {
+            return clsInternationalLicenseData.GetAllInternationalLicenseByDriverID(DriverID);
+        }
     }
 }

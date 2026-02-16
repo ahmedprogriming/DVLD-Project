@@ -135,6 +135,7 @@
             this.tmsInterntionalLicenes.Name = "tmsInterntionalLicenes";
             this.tmsInterntionalLicenes.Size = new System.Drawing.Size(264, 38);
             this.tmsInterntionalLicenes.Text = "International Licenes";
+            this.tmsInterntionalLicenes.Click += new System.EventHandler(this.tmsInterntionalLicenes_Click);
             // 
             // tsmRenewDrivingLicenes
             // 
@@ -204,6 +205,7 @@
             this.tsmInternationalLicenesApplications.Name = "tsmInternationalLicenesApplications";
             this.tsmInternationalLicenesApplications.Size = new System.Drawing.Size(407, 38);
             this.tsmInternationalLicenesApplications.Text = "International Licenes Applications";
+            this.tsmInternationalLicenesApplications.Click += new System.EventHandler(this.tsmInternationalLicenesApplications_Click);
             // 
             // tsmDetainLicenses
             // 

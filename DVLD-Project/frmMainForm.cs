@@ -99,5 +99,17 @@ namespace DVLD_Project
             frmListLocalDrivingLicenseApplications frm = new frmListLocalDrivingLicenseApplications();
             frm.ShowDialog();
         }
+
+        private void tmsInterntionalLicenes_Click(object sender, EventArgs e)
+        {
+            frmNewInternationalLicenseApplication frm=new frmNewInternationalLicenseApplication();
+            frm.ShowDialog();
+        }
+
+        private void tsmInternationalLicenesApplications_Click(object sender, EventArgs e)
+        {
+            frmListInternationalLicensesApplication frm=new frmListInternationalLicensesApplication();
+            frm.ShowDialog();
+        }
     }
 }

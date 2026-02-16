@@ -66,9 +66,10 @@ namespace DVLD_Project
             txtFilterLicenseID.Text = LicenseID.ToString();
             ctrlDriverLicenseInfo1.LoadInfo(LicenseID);
             _LicenseID = ctrlDriverLicenseInfo1.LicenseID;
+            
             if(OnLicesneSelected != null&&FilterEnbled)
 
-                    LicenseSelected(_LicenseID);
+                OnLicesneSelected(_LicenseID);
 
         }
 
@@ -112,7 +113,9 @@ namespace DVLD_Project
                 return;
             }
             _LicenseID=int.Parse(txtFilterLicenseID.Text.Trim());
-            ctrlDriverLicenseInfo1.LoadInfo(_LicenseID);
+            LoadLicenseInfo(_LicenseID);
+
+
         }
     }
 }
