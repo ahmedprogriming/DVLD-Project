@@ -197,5 +197,10 @@ namespace DVLD_Project
             labRecodINLApp.Text = dgvINLApplication.Rows.Count.ToString();
 
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

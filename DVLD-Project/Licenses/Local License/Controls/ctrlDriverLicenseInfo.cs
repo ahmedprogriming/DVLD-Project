@@ -69,12 +69,13 @@ namespace DVLD_Project
             lblGendor.Text = _License.DriverInfo.PersonInfo.Gendor == 0 ? "Mali" : "Fmail";
             lblIssueDate.Text = clsFormat.DateToShort(_License.IssueDate);
             lblExprintion.Text = clsFormat.DateToShort(_License.ExpirationDate);
-            lblissueReason.Text = (_License.IssueReasonText);
-            lblNotes.Text = _License.Notes == "" ? _License.Notes : "No Notes";
+            lblissueReason.Text = _License.IssueReasonText;
+            lblNotes.Text = _License.Notes == "" ? "No Notes": _License.Notes;
             lblDateOfBirth.Text = clsFormat.DateToShort(_License.DriverInfo.PersonInfo.DateOfBirth);
             lblDriverID.Text = _License.DriverID.ToString();
             lblIsActive.Text = (_License.IsActive == true ? "Yes" : "No");
             lblIsDetained.Text = "No";
+            
             _LoadPersonImage();
         }
     }

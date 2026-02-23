@@ -87,6 +87,7 @@ namespace DataAcess_Layer
             }
             catch (Exception ex)
             {
+                IsFound = false;
             }
             finally
             { connection.Close(); }

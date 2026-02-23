@@ -112,7 +112,7 @@ namespace DVLD_Project
                 MessageBox.Show("Some filed are not valide, put the mous over the read icon", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            int LinceseClassID=clsLicenseClass.Find(cobTypeCliss.Text).LicenseClassID;
+            int LinceseClassID=clsLicenseClass.FindByClassName(cobTypeCliss.Text).LicenseClassID;
 
             int ActiveApplication = clsLocalDrivingLicenseApplications.GetActiveApplicationByLicenseClassID(_Selectedperson, clsApplication.enApplicationType.NewInternationalLicense, LinceseClassID);
             if (ActiveApplication !=-1)

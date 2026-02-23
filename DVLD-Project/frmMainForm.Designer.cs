@@ -69,7 +69,8 @@
             this.accountSettingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1353, 72);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1546, 72);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "Applicatin";
             // 
@@ -145,6 +146,7 @@
             this.tsmRenewDrivingLicenes.Name = "tsmRenewDrivingLicenes";
             this.tsmRenewDrivingLicenes.Size = new System.Drawing.Size(471, 38);
             this.tsmRenewDrivingLicenes.Text = "Renew Driving Licenes";
+            this.tsmRenewDrivingLicenes.Click += new System.EventHandler(this.tsmRenewDrivingLicenes_Click);
             // 
             // tsmReplace
             // 
@@ -154,6 +156,7 @@
             this.tsmReplace.Name = "tsmReplace";
             this.tsmReplace.Size = new System.Drawing.Size(471, 38);
             this.tsmReplace.Text = "Replacement for Lost or Damage Licenes";
+            this.tsmReplace.Click += new System.EventHandler(this.tsmReplace_Click);
             // 
             // tmsReleaseDetaindDrivingLicenes
             // 
@@ -213,7 +216,7 @@
             this.tsmDetainLicenses.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmDetainLicenses.Name = "tsmDetainLicenses";
             this.tsmDetainLicenses.Size = new System.Drawing.Size(390, 70);
-            this.tsmDetainLicenses.Text = "Detain Licenses";
+            this.tsmDetainLicenses.Text = " ";
             // 
             // tsmManageApplicationType
             // 
@@ -309,7 +312,7 @@
             this.pictureBox1.Image = global::DVLD_Project.Properties.Resources.Logo_Final;
             this.pictureBox1.Location = new System.Drawing.Point(0, 72);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1353, 573);
+            this.pictureBox1.Size = new System.Drawing.Size(1546, 573);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -317,9 +320,9 @@
             // 
             // formMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1353, 645);
+            this.ClientSize = new System.Drawing.Size(1546, 645);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -47,17 +47,17 @@
             this.gbFilterLicense.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbFilterLicense.Location = new System.Drawing.Point(3, 3);
             this.gbFilterLicense.Name = "gbFilterLicense";
-            this.gbFilterLicense.Size = new System.Drawing.Size(455, 89);
+            this.gbFilterLicense.Size = new System.Drawing.Size(702, 89);
             this.gbFilterLicense.TabIndex = 190;
             this.gbFilterLicense.TabStop = false;
             this.gbFilterLicense.Text = "Filter";
             // 
             // txtFilterLicenseID
             // 
-            this.txtFilterLicenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilterLicenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFilterLicenseID.Location = new System.Drawing.Point(115, 42);
             this.txtFilterLicenseID.Name = "txtFilterLicenseID";
-            this.txtFilterLicenseID.Size = new System.Drawing.Size(228, 28);
+            this.txtFilterLicenseID.Size = new System.Drawing.Size(431, 30);
             this.txtFilterLicenseID.TabIndex = 3;
             this.txtFilterLicenseID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterLicenseID_KeyPress);
             this.txtFilterLicenseID.Validating += new System.ComponentModel.CancelEventHandler(this.txtFilterLicenseID_Validating);
@@ -67,7 +67,7 @@
             this.btnFindLicenseID.BackColor = System.Drawing.Color.White;
             this.btnFindLicenseID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFindLicenseID.Image = global::DVLD_Project.Properties.Resources.License_View_323;
-            this.btnFindLicenseID.Location = new System.Drawing.Point(364, 27);
+            this.btnFindLicenseID.Location = new System.Drawing.Point(566, 27);
             this.btnFindLicenseID.Name = "btnFindLicenseID";
             this.btnFindLicenseID.Size = new System.Drawing.Size(64, 56);
             this.btnFindLicenseID.TabIndex = 0;

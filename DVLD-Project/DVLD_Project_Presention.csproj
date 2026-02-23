@@ -83,6 +83,18 @@
     <Compile Include="Applications\Applications Type\Local Drivung License\crlLocalDrivingLicenseApplicationInfo.Designer.cs">
       <DependentUpon>crlLocalDrivingLicenseApplicationInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\Applications Type\Renew Local Driving License\frmRenewLocalDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Applications Type\Renew Local Driving License\frmRenewLocalDrivingLicense.Designer.cs">
+      <DependentUpon>frmRenewLocalDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\Applications Type\Replace Local License\frmReplacemnetDamageOrLost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Applications Type\Replace Local License\frmReplacemnetDamageOrLost.Designer.cs">
+      <DependentUpon>frmReplacemnetDamageOrLost.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\Intetnational License\Control\ctrDriverInternationalLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -303,6 +315,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Applications Type\Local Drivung License\crlLocalDrivingLicenseApplicationInfo.resx">
       <DependentUpon>crlLocalDrivingLicenseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Applications Type\Renew Local Driving License\frmRenewLocalDrivingLicense.resx">
+      <DependentUpon>frmRenewLocalDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Applications Type\Replace Local License\frmReplacemnetDamageOrLost.resx">
+      <DependentUpon>frmReplacemnetDamageOrLost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Intetnational License\Control\ctrDriverInternationalLicenseInfo.resx">
       <DependentUpon>ctrDriverInternationalLicenseInfo.cs</DependentUpon>
@@ -661,6 +679,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\driving-test 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Lost Driving License 32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

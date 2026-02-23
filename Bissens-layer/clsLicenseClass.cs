@@ -10,11 +10,13 @@ namespace Bissens_layer
 {
     public class clsLicenseClass
     {
+        public enum enMode { AddNew = 0, Update = 1 };
+        public enMode Mode = enMode.AddNew;
         public int LicenseClassID {  get; set; }
         public string LicenseName { get; set; }
 
-        public int DefaultValidityLength { get; set; }
-        public int MimmAge { get; set; }
+        public byte DefaultValidityLength { get; set; }
+        public byte MimmAge { get; set; }
         public string LicenseDescription { get; set; }
         public float ClassFess { get; set; }
 
@@ -24,11 +26,13 @@ namespace Bissens_layer
             this.ClassFess = 0;
             this.LicenseName = "";
             this.LicenseDescription = "";
-            this.DefaultValidityLength = -1;
-            this.MimmAge = -1;
+            this.DefaultValidityLength = 10;
+            this.MimmAge = 18;
+
+            Mode = enMode.AddNew;
         }
 
-        public clsLicenseClass(int ID,string Classname,int age,int DefaultValidityLength,float Fees,string LicenseDescription)
+        public clsLicenseClass(int ID,string Classname, byte age, byte DefaultValidityLength,float Fees,string LicenseDescription)
         {
             this.LicenseClassID = ID;
             this.ClassFess = Fees;
@@ -36,6 +40,8 @@ namespace Bissens_layer
             this.DefaultValidityLength = DefaultValidityLength;
             this.LicenseDescription= LicenseDescription;
             this.MimmAge = age;
+
+            Mode = enMode.Update;
         }
 
         public static DataTable GettAllLicenseClass()
@@ -46,10 +52,11 @@ namespace Bissens_layer
         public static clsLicenseClass Find(int ID)
         {
             string Classname = "";string LicenseDescription = "";
-            int age = 18;
-            int DefaultValidityLength = 10;
-            float fess = -1;
-            if (clsLicenseClassData.GetLicenseClassByID(ID, ref Classname, ref age, ref DefaultValidityLength, ref fess,ref LicenseDescription))
+            byte age = 18;
+            byte DefaultValidityLength = 10;
+
+            float fess = 0;
+            if (clsLicenseClassData.GetLicenseClassInfoByID(ID, ref Classname, ref LicenseDescription, ref age, ref DefaultValidityLength,  ref fess))
             {
                 return new clsLicenseClass(ID, Classname, age, DefaultValidityLength, fess, LicenseDescription);
             }
@@ -58,13 +65,13 @@ namespace Bissens_layer
             
         }
 
-        public static clsLicenseClass Find(string ClassName)
+        public static clsLicenseClass FindByClassName(string ClassName)
         {
             int Id =-1;
-            int age = -1;
+            byte age = 18;
             string LicenseDescription = "";
-            int DefaultValidityLength = -1;
-            float fess = -1;
+            byte DefaultValidityLength = 10;
+            float fess = 0;
             if (clsLicenseClassData.GetLicenseClassByClassName(ClassName, ref Id, ref age,ref DefaultValidityLength, ref fess, ref LicenseDescription))
             {
                 return new clsLicenseClass(Id, ClassName, age, DefaultValidityLength, fess, LicenseDescription);

@@ -33,7 +33,7 @@ namespace Bissens_layer
 
         public clsLocalDrivingLicenseApplications()
         {
-            this.LocalDrivingLicenseApplicationID = 0 - 1;
+            this.LocalDrivingLicenseApplicationID =-1;
             this.LicenseClassID = -1;
             _mode = Mode.AddNew;
         }
@@ -290,6 +290,9 @@ namespace Bissens_layer
          
 
         }
+
+       
+
         public bool IsLicenseIssue()
         {
             return (GetActiveLicenseID() != -1);

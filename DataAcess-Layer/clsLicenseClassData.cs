@@ -40,49 +40,60 @@ namespace DataAcess_Layer
             return dataTable;
         }
 
-        public static bool GetLicenseClassByID(int ID, ref string ClassName,ref int minmAge,ref int DefaultValidityLength, ref float ClassFees,ref string ClassDescription)
+        public static bool GetLicenseClassInfoByID(int LicenseClassID,
+            ref string ClassName, ref string ClassDescription, ref byte MinimumAllowedAge,
+            ref byte DefaultValidityLength, ref float ClassFees)
         {
-            bool IsFound = false;
+            bool isFound = false;
+
             SqlConnection connection = new SqlConnection(clsCounection.CounectionString);
 
-            string query = "Select * From LicenseClasses  Where LicenseClassID=@LicenseClassID;";
+            string query = "SELECT * FROM LicenseClasses WHERE LicenseClassID = @LicenseClassID";
 
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@LicenseClassID", ID);
+
+            command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
 
             try
             {
                 connection.Open();
-
                 SqlDataReader reader = command.ExecuteReader();
 
                 if (reader.Read())
                 {
-                    IsFound = true;
-                    ClassName = (String)reader["ClassName"];
+                    // The record was found
+                    isFound = true;
+
+                    ClassName = (string)reader["ClassName"];
                     ClassDescription = (string)reader["ClassDescription"];
-                    minmAge = (int)reader["MinimumAllowedAge"];
-                    DefaultValidityLength = (int)reader["DefaultValidityLength"];
-                    ClassFees = Convert.ToSingle( reader["ClassFees"]);
+                    MinimumAllowedAge = (byte)reader["MinimumAllowedAge"];
+                    DefaultValidityLength = (byte)reader["DefaultValidityLength"];
+                    ClassFees = Convert.ToSingle(reader["ClassFees"]);
 
                 }
                 else
                 {
-                    IsFound = false;
+                    // The record was not found
+                    isFound = false;
                 }
+
                 reader.Close();
 
 
             }
             catch (Exception ex)
             {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
             }
             finally
-            { connection.Close(); }
-            return IsFound;
-        }
+            {
+                connection.Close();
+            }
 
-        public static bool GetLicenseClassByClassName(string ClassName, ref int ID, ref int minmAge,ref int DefaultValidityLength, ref float ClassFees,ref string ClassDescription)
+            return isFound;
+        }
+        public static bool GetLicenseClassByClassName(string ClassName, ref int ID, ref byte minmAge,ref byte DefaultValidityLength, ref float ClassFees,ref string ClassDescription)
         {
             bool IsFound = false;
             SqlConnection connection = new SqlConnection(clsCounection.CounectionString);
@@ -102,8 +113,8 @@ namespace DataAcess_Layer
                 {
                     IsFound = true;
                     ID = (int)reader["LicenseClassID"];
-                    minmAge = (int)reader["MinimumAllowedAge"];
-                    DefaultValidityLength = (int)reader["DefaultValidityLength"];
+                    minmAge = (byte)reader["MinimumAllowedAge"];
+                    DefaultValidityLength = (byte)reader["DefaultValidityLength"];
                     ClassFees = Convert.ToSingle(reader["ClassFees"]);
                     ClassDescription = (string)reader["ClassDescription"];
 

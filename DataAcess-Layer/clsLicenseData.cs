@@ -47,7 +47,7 @@ namespace DataAcess_Layer
             return dataTable;
         }
         public static bool GetAllLicenseByID(int LicenseID,ref int ApplicationID, ref int DriverID, ref int LicenseClass, ref DateTime IssueDate,
-         ref DateTime ExpirationDate, ref string Notes, ref float PaidFees, ref bool IsActive, ref int IssueReason, ref int CreatedByUserID)
+         ref DateTime ExpirationDate, ref string Notes, ref float PaidFees, ref bool IsActive, ref byte IssueReason, ref int CreatedByUserID)
         {
             bool IsFound = false;
             SqlConnection connection = new SqlConnection(clsCounection.CounectionString);
@@ -66,6 +66,7 @@ namespace DataAcess_Layer
                 if (reader.Read())
                 {
                     IsFound = true;
+                    ApplicationID = (int)reader["ApplicationID"];
                     LicenseID = (int)reader["LicenseID"];
                     LicenseClass = (int)reader["LicenseClass"];
                     DriverID = (int)reader["DriverID"];
@@ -81,7 +82,7 @@ namespace DataAcess_Layer
                     }
                     PaidFees = Convert.ToSingle(reader["PaidFees"]);
                     IsActive = (bool)reader["IsActive"];
-                    IssueReason = (int)reader["IssueReason"];
+                    IssueReason = (byte)reader["IssueReason"];
                     CreatedByUserID = (int)reader["CreatedByUserID"];
 
                 }
@@ -110,7 +111,8 @@ namespace DataAcess_Layer
 from Licenses inner join LicenseClasses
 on Licenses.LicenseClass=LicenseClasses.LicenseClassID inner Join Applications
 on Licenses.ApplicationID=Applications.ApplicationID
-where DriverID=@DriverID";
+where DriverID=@DriverID
+Order By IsActive Desc, ExpirationDate Desc";
 
 
             SqlCommand command = new SqlCommand(query, connection);

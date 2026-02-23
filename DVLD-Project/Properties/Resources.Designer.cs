@@ -343,6 +343,16 @@ namespace DVLD_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Driver_License_484 {
+            get {
+                object obj = ResourceManager.GetObject("Driver License 484", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Driver_Main {
             get {
                 object obj = ResourceManager.GetObject("Driver Main", resourceCulture);
@@ -576,6 +586,16 @@ namespace DVLD_Project.Properties {
         internal static System.Drawing.Bitmap Logo_Final {
             get {
                 object obj = ResourceManager.GetObject("Logo Final", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lost_Driving_License_32 {
+            get {
+                object obj = ResourceManager.GetObject("Lost Driving License 32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -866,6 +886,16 @@ namespace DVLD_Project.Properties {
         internal static System.Drawing.Bitmap Renew_Driving_License_321 {
             get {
                 object obj = ResourceManager.GetObject("Renew Driving License 321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Renew_Driving_License_322 {
+            get {
+                object obj = ResourceManager.GetObject("Renew Driving License 322", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

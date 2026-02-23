@@ -111,5 +111,17 @@ namespace DVLD_Project
             frmListInternationalLicensesApplication frm=new frmListInternationalLicensesApplication();
             frm.ShowDialog();
         }
+
+        private void tsmRenewDrivingLicenes_Click(object sender, EventArgs e)
+        {
+            frmRenewLocalDrivingLicense frm = new frmRenewLocalDrivingLicense();
+            frm.ShowDialog();
+        }
+
+        private void tsmReplace_Click(object sender, EventArgs e)
+        {
+            frmReplacemnetDamageOrLost frm=new frmReplacemnetDamageOrLost();
+            frm.ShowDialog();
+        }
     }
 }
