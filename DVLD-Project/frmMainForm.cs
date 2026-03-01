@@ -123,5 +123,23 @@ namespace DVLD_Project
             frmReplacemnetDamageOrLost frm=new frmReplacemnetDamageOrLost();
             frm.ShowDialog();
         }
+
+        private void tsmDetainLicense_Click(object sender, EventArgs e)
+        {
+            frmDetainLicense frm=new frmDetainLicense();
+            frm.ShowDialog();
+        }
+
+        private void tsmReleaseDetainedLicense_Click(object sender, EventArgs e)
+        {
+            frmReleaseDetainLicense frm = new frmReleaseDetainLicense();
+            frm.ShowDialog();
+        }
+
+        private void tsmmanageDetainedLicensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListDetainLicense frm =new frmListDetainLicense();
+            frm.ShowDialog();
+        }
     }
 }

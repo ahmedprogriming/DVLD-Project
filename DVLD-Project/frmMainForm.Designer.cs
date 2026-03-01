@@ -43,6 +43,9 @@
             this.tsmLocalDrivingLiceneApplicaton = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmInternationalLicenesApplications = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmDetainLicenses = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmmanageDetainedLicensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDetainLicense = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmReleaseDetainedLicense = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageApplicationType = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageTestType = new System.Windows.Forms.ToolStripMenuItem();
             this.peopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -212,11 +215,44 @@
             // 
             // tsmDetainLicenses
             // 
+            this.tsmDetainLicenses.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmmanageDetainedLicensesToolStripMenuItem,
+            this.tsmDetainLicense,
+            this.tsmReleaseDetainedLicense});
+            this.tsmDetainLicenses.Font = new System.Drawing.Font("Segoe UI Historic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmDetainLicenses.Image = global::DVLD_Project.Properties.Resources.Detain_64;
             this.tsmDetainLicenses.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmDetainLicenses.Name = "tsmDetainLicenses";
             this.tsmDetainLicenses.Size = new System.Drawing.Size(390, 70);
-            this.tsmDetainLicenses.Text = " ";
+            this.tsmDetainLicenses.Text = " Detain Licenses";
+            // 
+            // tsmmanageDetainedLicensesToolStripMenuItem
+            // 
+            this.tsmmanageDetainedLicensesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmmanageDetainedLicensesToolStripMenuItem.Image = global::DVLD_Project.Properties.Resources.Detain_321;
+            this.tsmmanageDetainedLicensesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmmanageDetainedLicensesToolStripMenuItem.Name = "tsmmanageDetainedLicensesToolStripMenuItem";
+            this.tsmmanageDetainedLicensesToolStripMenuItem.Size = new System.Drawing.Size(397, 38);
+            this.tsmmanageDetainedLicensesToolStripMenuItem.Text = "Manage Detained Licenses";
+            this.tsmmanageDetainedLicensesToolStripMenuItem.Click += new System.EventHandler(this.tsmmanageDetainedLicensesToolStripMenuItem_Click);
+            // 
+            // tsmDetainLicense
+            // 
+            this.tsmDetainLicense.Image = global::DVLD_Project.Properties.Resources.Detain_32;
+            this.tsmDetainLicense.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmDetainLicense.Name = "tsmDetainLicense";
+            this.tsmDetainLicense.Size = new System.Drawing.Size(397, 38);
+            this.tsmDetainLicense.Text = "Detain License";
+            this.tsmDetainLicense.Click += new System.EventHandler(this.tsmDetainLicense_Click);
+            // 
+            // tsmReleaseDetainedLicense
+            // 
+            this.tsmReleaseDetainedLicense.Image = global::DVLD_Project.Properties.Resources.Release_Detained_License_32;
+            this.tsmReleaseDetainedLicense.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmReleaseDetainedLicense.Name = "tsmReleaseDetainedLicense";
+            this.tsmReleaseDetainedLicense.Size = new System.Drawing.Size(397, 38);
+            this.tsmReleaseDetainedLicense.Text = "Release Detained License";
+            this.tsmReleaseDetainedLicense.Click += new System.EventHandler(this.tsmReleaseDetainedLicense_Click);
             // 
             // tsmManageApplicationType
             // 
@@ -366,6 +402,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsmRetakeTest;
         private System.Windows.Forms.ToolStripMenuItem tsmLocalDrivingLiceneApplicaton;
         private System.Windows.Forms.ToolStripMenuItem tsmInternationalLicenesApplications;
+        private System.Windows.Forms.ToolStripMenuItem tsmmanageDetainedLicensesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmDetainLicense;
+        private System.Windows.Forms.ToolStripMenuItem tsmReleaseDetainedLicense;
     }
 }
 

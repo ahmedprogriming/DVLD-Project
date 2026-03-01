@@ -30,6 +30,7 @@
         {
             this.lblTitel = new System.Windows.Forms.Label();
             this.groInformtionPeople = new System.Windows.Forms.GroupBox();
+            this.crlCardInfoWithFalter1 = new DVLD_Project.crlCardInfoWithFalter();
             this.lblTotalFees = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtNots = new System.Windows.Forms.TextBox();
@@ -54,6 +55,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.linkShowLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.linkShowLicenseHisTory = new System.Windows.Forms.LinkLabel();
+            this.ctrlDriverLicenseWithFilter1 = new DVLD_Project.ctrlDriverLicenseWithFilter();
             this.btnRenewLicense = new System.Windows.Forms.Button();
             this.btnClos = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -67,8 +69,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.crlCardInfoWithFalter1 = new DVLD_Project.crlCardInfoWithFalter();
-            this.ctrlDriverLicenseWithFilter1 = new DVLD_Project.ctrlDriverLicenseWithFilter();
             this.groInformtionPeople.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -138,6 +138,17 @@
             this.groInformtionPeople.TabIndex = 99;
             this.groInformtionPeople.TabStop = false;
             this.groInformtionPeople.Text = "Application New License  Info";
+            // 
+            // crlCardInfoWithFalter1
+            // 
+            this.crlCardInfoWithFalter1.BackColor = System.Drawing.Color.White;
+            this.crlCardInfoWithFalter1.FiltrEnbled = true;
+            this.crlCardInfoWithFalter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crlCardInfoWithFalter1.Location = new System.Drawing.Point(360, -92);
+            this.crlCardInfoWithFalter1.Name = "crlCardInfoWithFalter1";
+            this.crlCardInfoWithFalter1.ShowAddPerson = true;
+            this.crlCardInfoWithFalter1.Size = new System.Drawing.Size(10, 155);
+            this.crlCardInfoWithFalter1.TabIndex = 184;
             // 
             // lblTotalFees
             // 
@@ -406,6 +417,18 @@
             this.linkShowLicenseHisTory.Text = "Show License History";
             this.linkShowLicenseHisTory.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkShowLicenseHisTory_LinkClicked);
             // 
+            // ctrlDriverLicenseWithFilter1
+            // 
+            this.ctrlDriverLicenseWithFilter1.BackColor = System.Drawing.Color.White;
+            this.ctrlDriverLicenseWithFilter1.FilterEnbled = true;
+            this.ctrlDriverLicenseWithFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlDriverLicenseWithFilter1.Location = new System.Drawing.Point(22, 49);
+            this.ctrlDriverLicenseWithFilter1.Name = "ctrlDriverLicenseWithFilter1";
+            this.ctrlDriverLicenseWithFilter1.Size = new System.Drawing.Size(923, 450);
+            this.ctrlDriverLicenseWithFilter1.TabIndex = 98;
+            this.ctrlDriverLicenseWithFilter1.OnLicesneSelected += new System.Action<int>(this.ctrlDriverLicenseWithFilter1_OnLicesneSelected);
+            this.ctrlDriverLicenseWithFilter1.Load += new System.EventHandler(this.ctrlDriverLicenseWithFilter1_Load);
+            // 
             // btnRenewLicense
             // 
             this.btnRenewLicense.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -550,29 +573,6 @@
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox11.TabIndex = 149;
             this.pictureBox11.TabStop = false;
-            // 
-            // crlCardInfoWithFalter1
-            // 
-            this.crlCardInfoWithFalter1.BackColor = System.Drawing.Color.White;
-            this.crlCardInfoWithFalter1.FiltrEnbled = true;
-            this.crlCardInfoWithFalter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.crlCardInfoWithFalter1.Location = new System.Drawing.Point(360, -92);
-            this.crlCardInfoWithFalter1.Name = "crlCardInfoWithFalter1";
-            this.crlCardInfoWithFalter1.ShowAddPerson = true;
-            this.crlCardInfoWithFalter1.Size = new System.Drawing.Size(10, 155);
-            this.crlCardInfoWithFalter1.TabIndex = 184;
-            // 
-            // ctrlDriverLicenseWithFilter1
-            // 
-            this.ctrlDriverLicenseWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrlDriverLicenseWithFilter1.FilterEnbled = true;
-            this.ctrlDriverLicenseWithFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlDriverLicenseWithFilter1.Location = new System.Drawing.Point(22, 49);
-            this.ctrlDriverLicenseWithFilter1.Name = "ctrlDriverLicenseWithFilter1";
-            this.ctrlDriverLicenseWithFilter1.Size = new System.Drawing.Size(923, 450);
-            this.ctrlDriverLicenseWithFilter1.TabIndex = 98;
-            this.ctrlDriverLicenseWithFilter1.OnLicesneSelected += new System.Action<int>(this.ctrlDriverLicenseWithFilter1_OnLicesneSelected);
-            this.ctrlDriverLicenseWithFilter1.Load += new System.EventHandler(this.ctrlDriverLicenseWithFilter1_Load);
             // 
             // frmRenewLocalDrivingLicense
             // 

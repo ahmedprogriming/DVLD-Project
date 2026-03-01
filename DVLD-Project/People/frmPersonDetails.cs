@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace DVLD_Project
 {
-    public partial class Person_Details : Form
+    public partial class frmPerson_Details : Form
     {
      
         
-        public Person_Details(int PersonID)
+        public frmPerson_Details(int PersonID)
         {
             InitializeComponent();
      
@@ -22,7 +22,7 @@ namespace DVLD_Project
             clrInformtionPople1.LoadPersonInfo(PersonID);
         }
 
-        public Person_Details(string NationalNo)
+        public frmPerson_Details(string NationalNo)
         {
             InitializeComponent();
             clrInformtionPople1.LoadPersonInfo(NationalNo);

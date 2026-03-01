@@ -74,7 +74,7 @@ namespace DVLD_Project
             lblDateOfBirth.Text = clsFormat.DateToShort(_License.DriverInfo.PersonInfo.DateOfBirth);
             lblDriverID.Text = _License.DriverID.ToString();
             lblIsActive.Text = (_License.IsActive == true ? "Yes" : "No");
-            lblIsDetained.Text = "No";
+            lblIsDetained.Text =_License.IsDetained? "Yes" : "No";
             
             _LoadPersonImage();
         }

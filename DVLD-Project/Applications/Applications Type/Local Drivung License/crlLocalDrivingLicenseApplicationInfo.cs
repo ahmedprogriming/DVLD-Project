@@ -99,7 +99,7 @@ namespace DVLD_Project
 
         private void linkPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Person_Details frm=new Person_Details(_LocalDriverL.ApplicantPersonID);
+            frmPerson_Details frm=new frmPerson_Details(_LocalDriverL.ApplicantPersonID);
             frm.ShowDialog();
         }
 

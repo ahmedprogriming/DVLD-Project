@@ -27,6 +27,16 @@ namespace Bissens_layer
         public bool IsActive { get; set; }
         public int CreatedByUserID { get; set; }
         public enIssueReason IssueReason {  get; set; }
+
+        public clsDetainLicense DetainedInfo { get; set; }
+
+        public bool IsDetained
+        {
+            get
+            {
+              return clsDetainLicense.IsDetainLicense(this.LicenseID);
+            }
+        }
        public string IssueReasonText
         {
             get
@@ -69,6 +79,7 @@ namespace Bissens_layer
             CreatedByUserID = createdByUserID;
             DriverInfo=clsDriver.GetAllDriversByID(this.DriverID);
             LicenseClassInfo=clsLicenseClass.Find(this.LicenseClass);
+            DetainedInfo=clsDetainLicense.FindByLicenseID(this.LicenseID);
             _mode = Mode.Update;
         }
 
@@ -274,6 +285,45 @@ namespace Bissens_layer
             return _License;
         }
 
-     
+        public int Detain(float FineFess,int CurrentUser)
+        {
+            clsDetainLicense detainLicense = new clsDetainLicense();
+
+            detainLicense.LicenseID = this.LicenseID;
+            detainLicense.DetainDate = DateTime.Now;
+            detainLicense.FineFees =Convert.ToSingle( FineFess);
+            detainLicense.CreatedByUserID = CurrentUser;
+
+            if (!detainLicense.Save())
+            {
+             
+                return -1;
+            }
+
+            return detainLicense.DetainID;
+        }
+
+        public bool RelesaedDetainLicense( int ReleaseByUser,ref int AppliactionID)
+        {
+            clsApplication application = new clsApplication();
+
+            application.ApplicantPersonID = this.DriverInfo.PersonID;
+            application.ApplicationDate = DateTime.Now;
+            application.LastStatusDate = DateTime.Now;
+            application.ApplicationStatus = clsApplication.enApplicationStatue.Completed;
+            application.ApplicationTypeID = clsApplicatonType.FindAppTypeID((int)clsApplication.enApplicationType.ReleaseDetainedDrivingLicsense).AppTypeID;
+            application.PaidFees = clsApplicatonType.FindAppTypeID((int)clsApplication.enApplicationType.ReplacementforaDamagedDrivingLicense).AppTypeFees;
+            application.CreatedByUserID = ReleaseByUser;
+
+            if (!application.Save())
+            {
+                return false;
+            }
+
+            AppliactionID = application.ApplicationID;
+
+            return this.DetainedInfo.ReleasedDetainLicense(ReleaseByUser,application.ApplicationID);
+        }
+
     }
 }

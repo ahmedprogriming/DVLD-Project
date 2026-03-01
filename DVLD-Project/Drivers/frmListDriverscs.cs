@@ -111,7 +111,7 @@ namespace DVLD_Project
         private void tsmShowPersonDetiles_Click(object sender, EventArgs e)
         {
             int PersonID = (int)dgvManagerDrivers.CurrentRow.Cells[1].Value;
-            Person_Details frm = new Person_Details(PersonID);
+            frmPerson_Details frm = new frmPerson_Details(PersonID);
             frm.ShowDialog();
 
             frmListDriverscs_Load(null,null);

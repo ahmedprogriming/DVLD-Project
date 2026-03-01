@@ -1,6 +1,6 @@
 ﻿namespace DVLD_Project
 {
-    partial class Person_Details
+    partial class frmPerson_Details
     {
         /// <summary>
         /// Required designer variable.
@@ -68,7 +68,7 @@
             this.clrInformtionPople1.Size = new System.Drawing.Size(887, 289);
             this.clrInformtionPople1.TabIndex = 47;
             // 
-            // Person_Details
+            // frmPerson_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -78,7 +78,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Person_Details";
+            this.Name = "frmPerson_Details";
             this.ShowIcon = false;
             this.Text = "Person_Details";
             this.Load += new System.EventHandler(this.Person_Details_Load);

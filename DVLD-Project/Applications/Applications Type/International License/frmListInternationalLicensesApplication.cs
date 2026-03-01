@@ -122,7 +122,7 @@ namespace DVLD_Project
                 return;
             }
 
-            Person_Details frm = new Person_Details(internationalLicense.DriverInfo.PersonID);
+            frmPerson_Details frm = new frmPerson_Details(internationalLicense.DriverInfo.PersonID);
             frm.ShowDialog();
         }
 

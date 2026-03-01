@@ -177,7 +177,7 @@ namespace DVLD_Project
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
            int PersonID=(int)dataGridView1.CurrentRow.Cells[0].Value;
-            Person_Details PersoShow=new Person_Details(PersonID);
+            frmPerson_Details PersoShow=new frmPerson_Details(PersonID);
             PersoShow.ShowDialog();
         }
 
@@ -233,7 +233,7 @@ namespace DVLD_Project
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            Form frm = new Person_Details((int)dataGridView1.CurrentRow.Cells[0].Value);
+            Form frm = new frmPerson_Details((int)dataGridView1.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
     }
